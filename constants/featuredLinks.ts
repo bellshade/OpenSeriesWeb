@@ -2,7 +2,7 @@ export const featuredLinks = [
     {
         name: "Kontribusi",
         icon: "icon-[solar--heart-shine-bold]",
-        href: "/contribute"
+        href: "/docs/contribute"
     },
     {
         name: "Request Fitur",
