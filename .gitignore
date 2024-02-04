@@ -1,28 +1,41 @@
-# cache dari hasil running python
-__pycache__/
-.pytest_cache/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# hasil dari installasi
-*.egg-info
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+package-lock.json
+yarn.lock
 
-# hasil dari build pip
-build/
-build
+# testing
+/coverage
 
-# ignore dari website
-.next/
-.next
-node_modules/
-node_modules
-*.ts
-next-*
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
 next-env.d.ts
 
-# hasil dari format ruff
-.ruff_cache
-
-# hasil cache dari mypy
-.mypy_cache
-
-# cache dari dist
-dist
+/OpenSeries
+/testing

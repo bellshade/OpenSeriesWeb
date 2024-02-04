@@ -1,57 +1,85 @@
-# OpenSeries
+# Website OpenSeries
 
-![banner](.github/openSeries.png)
 
-![codequality](https://img.shields.io/codacy/grade/06ba6d6d345f4c15bf8e5cc3eac19d4d?style=flat-square&logo=codacy)
-![build badge](https://img.shields.io/github/actions/workflow/status/bellshade/OpenSeries/pythontesting.yml?style=flat-square&logo=github&label=Build%20(%20Linux%2C%20Windows%2C%20MacOS))
+Selamat datang di repositori OpenSeries! Repositori ini berisi kode sumber untuk website OpenSeries. Kami menggunakan runtime dan package manager dari Bun, jadi jika Anda ingin berkontribusi, pastikan untuk menginstal Bun terlebih dahulu dengan mengacu pada dokumentasi resmi di https://bun.sh/.
 
-Project Untuk Menghitung Segala Jenis Persamaan atau Rumus-Rumus yang terdapat pada bangku sekolah (SMA/SMK/Sederajat) dan jenjang yang lebih lanjut.
-Project ini bertujuan untuk memudahkan siswa dalam menghitung persamaan atau problem-problem yang terdapat pada pelajaran sekolah (cheat egine untuk hitung-menghitung).
+## Memulai
 
-**Menghitung nilai probabilitas dari suatu kejadian**
+Untuk berkontribusi pada website OpenSeries, ikuti langkah-langkah berikut:
 
-```python
-import OpenSeries.matematika as matematika
+1. Fork repositori ini di GitHub.
 
-nilai_a = 4
-nilai_s = 20
+2. Clone repositori yang telah di-fork ke mesin lokal Anda:
 
-print("menghitung probabilitas suatu kejadian")
-print(f"dengan jumlah hasil yang menguntungkan :{nilai_a}")
-print(f"dan dengan ukuran ruang sampel {nilai_s}")
-print(
-    f"probabilitas dari kejadiannya adalah: {matematika.peluang_kejadian(nilai_a, nilai_s)}\n"
-)
-```
+    ```bash
+    git clone https://github.com/nama-anda/OpenSeries.git
+    ```
 
-## Requirements
+3. Pindah ke direktori proyek:
 
-Untuk Menjalankan Library ini, kamu harus Memiliki Python dengan versi: 3.11.6 hingga 3.12.
+    ```bash
+    cd OpenSeries
+    ```
 
-## Installasi
+4. Pastikan branch Anda diatur ke `develop`:
 
-kamu bisa menginstall package `OpenSeries` via pip dengan cara
+    ```bash
+    git checkout develop
+    ```
 
-```bash
-pip install OpenSeriesBellshade
-```
+5. Buat branch baru untuk fitur atau perbaikan bug:
 
-## Docker
-kamu juga bisa testing package via `docker`` dengan cara
+    ```bash
+    git checkout -b nama-fitur
+    ```
 
-```bash
-bash docker.sh
-```
-> Note: untuk windows kalian bisa install dulu dockernya dengan panduan yang ada di [`Docker Docs`](https://docs.docker.com/desktop/install/windows-install/)
+## Alur Pengembangan
 
-Informasi:
+1. Instal paket yang diperlukan menggunakan Bun:
 
-kamu bisa melihat pada [wiki](https://github.com/bellshade/OpenSeries/wiki) atau ke [website](openseries.pages.dev/), untuk dokumentasi installasi dan pengunaan dari `OpenSeries`
+    ```bash
+    bun install
+    ```
 
-## 🤩 Ayo ikut kami dan berkontribusi! 🤩
+2. Jalankan proyek menggunakan Bun:
 
-Bantuan kalian diperlukan Agar Bellshade dapat lebih jauh lagi mengembangan Project ini, kita butuh tenaga kalian!
+    ```bash
+    bun dev
+    ```
 
-Kami sangat senang bilat kalian melakukan kontribusi project **OpenSeries** ini. Tapi, sebelum itu, silahkan baca terlebih dahulu [peraturan dan pedomannya](CONTRIBUTING.md) yang telah kami siapkan. Terima kasih
+3. Sebelum melakukan commit, jalankan linter Bun untuk memastikan kualitas kode:
 
-Untuk informasi lebih lanjut, mari gabung dalam komunitas [Discord Channel WPU](http://discord.gg/S4rrXQU) dan [Discord Channel Kelas Terbuka](https://discord.gg/eavqxxTU)
+    ```bash
+    bun lint
+    ```
+
+4. Format kode menggunakan Bun Prettier:
+
+    ```bash
+    bun format
+    ```
+
+5. Lakukan commit perubahan Anda dengan menggunakan salah satu awalan pesan commit berikut:
+
+    - `feat:` untuk fitur baru
+    - `fix:` untuk perbaikan bug
+    - `docs:` untuk perubahan dokumentasi
+    - `add:` untuk menambahkan file atau aset
+
+    Contoh commit:
+
+    ```bash
+    git commit -m "feat: menambahkan fitur baru"
+    ```
+
+## Pull Request
+
+Setelah membuat perubahan, dorong branch ke fork Anda di GitHub dan buat pull request yang dituju ke branch develop repositori ini.
+
+## Kontributor
+
+Terima kasih kepada semua kontributor yang telah membantu meningkatkan website OpenSeries! Jika Anda tertarik berkontribusi, silakan fork repositori ini dan kirim pull request ke branch develop.
+
+## Lisensi
+
+Proyek ini dilisensikan di bawah Lisensi MIT.

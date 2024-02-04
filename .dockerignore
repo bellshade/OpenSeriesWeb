@@ -1,8 +1,0 @@
-.gitignore
-.mergify.yml
-.pre-commit-config.yaml
-CONTRIBUTING.md
-LICENSE
-README.md
-.github/*
-.github

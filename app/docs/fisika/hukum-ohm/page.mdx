@@ -1,0 +1,34 @@
+import Codeblock from "@/components/Codeblock";
+
+# Hukum Ohm
+
+Rumus:
+
+```
+V = I * R
+```
+
+Fungsi [sumber kode [disini](https://github.com/bellshade/OpenSeries/blob/main/OpenSeries/fisika.py#L137)]
+
+```python
+def hukum_ohm(i: Union[float, int], r: Union[float, int]) -> Union[float, int, str]:
+```
+
+Contoh Kode
+
+```python
+import OpenSeries.fisika as fisika
+
+kuat_arus = 30
+hambatan = 3
+print(fisika.hukum_ohm(kuat_arus, hambatan))
+```
+
+## Coba Sekarang
+
+<Codeblock code={`import OpenSeries.fisika as fisika
+
+kuat_arus = 30
+hambatan = 3
+print(fisika.hukum_ohm(kuat_arus, hambatan))
+`} />
