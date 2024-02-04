@@ -15,7 +15,7 @@ export default function Sidebar({}: Props) {
     return (
         <>
             <aside
-                className={`fixed inset-y-0 z-20 mt-16 flex min-w-[280px] max-w-[280px] flex-col gap-8 overflow-y-auto border-r bg-inherit p-8 dark:border-r-zinc-800 lg:translate-x-0 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+                className={`fixed inset-y-0 z-30 mt-16 flex min-w-[280px] max-w-[280px] flex-col gap-8 overflow-y-auto border-r bg-inherit p-8 dark:border-r-zinc-800 lg:translate-x-0 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
             >
                 <div className="grid gap-2">
                     {featuredLinks.map((link) => (
