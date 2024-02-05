@@ -49,11 +49,11 @@ export const documentations = [
                 href: "/docs/fisika/energi-kinetik"
             },
             {
-                title: "Masa Jenis",
+                title: "Massa Jenis",
                 href: "/docs/fisika/masa-jenis"
             },
             {
-                title: "Energi Potensian",
+                title: "Energi Potensial",
                 href: "/docs/fisika/energi-potensial"
             },
             {
