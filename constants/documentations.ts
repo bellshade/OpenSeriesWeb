@@ -34,6 +34,10 @@ export const documentations = [
             {
                 title: "Persamaan Kuadrat",
                 href: "/docs/matematika/persamaan-kuadrat"
+            },
+            {
+                title: "Faktorial",
+                href: "/docs/matematika/faktorial"
             }
         ]
     },
