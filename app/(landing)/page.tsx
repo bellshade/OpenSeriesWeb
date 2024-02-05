@@ -1,9 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import landingImg from "@/assets/landing.png";
 import { projectByLinks } from "@/constants/projectByLinks";
-import Image from "next/image";
+import LandingSvg from "@/components/LandingSvg";
 
 export default function Home() {
     return (
@@ -43,7 +42,10 @@ export default function Home() {
                             </span>
                         </div>
                     </div>
-                    <Image className="order-1 lg:order-2" src={landingImg} alt="" />
+                    <LandingSvg
+                        id="landing-svg"
+                        className="order-1 max-w-full stroke-zinc-800 dark:stroke-white lg:order-2"
+                    />
                 </div>
             </main>
         </>
