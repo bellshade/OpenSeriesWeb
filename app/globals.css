@@ -61,3 +61,21 @@
         width: 3rem;
     }
 }
+
+@layer components {
+    #landing-svg path {
+        stroke-dashoffset: 3000;
+        stroke-dasharray: 3000;
+    }
+
+    @keyframes landing-svg-anim {
+        0%,
+        100% {
+            opacity: 0;
+        }
+        50% {
+            stroke-dashoffset: 0;
+            opacity: 100;
+        }
+    }
+}
