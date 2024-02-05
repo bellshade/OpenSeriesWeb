@@ -42,7 +42,10 @@ export default function Home() {
                             </span>
                         </div>
                     </div>
-                    <LandingSvg id="landing-svg" className="order-1 max-w-full lg:order-2" />
+                    <LandingSvg
+                        id="landing-svg"
+                        className="order-1 max-w-full stroke-zinc-800 dark:stroke-white lg:order-2"
+                    />
                 </div>
             </main>
         </>
