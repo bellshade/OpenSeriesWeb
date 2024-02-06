@@ -24,7 +24,7 @@ const Codeblock = ({ code }: Props) => {
     const { runPython, stdout, stderr, isLoading, isRunning } = usePython();
 
     return (
-        <div className="space-y-4">
+        <div className="not-prose space-y-4">
             <div className="relative flex max-w-max divide-x divide-indigo-500 overflow-hidden rounded-lg">
                 <div
                     className={`absolute inset-0 z-20 grid place-items-center rounded-lg border bg-white dark:border-zinc-700 dark:bg-zinc-900 ${isLoading ? "opacity-100" : "pointer-events-none opacity-0"}`}
@@ -74,10 +74,16 @@ const Codeblock = ({ code }: Props) => {
                         />
                     </div>
                     <div className="flex p-8">
-                        {!stdout && !stderr && !isRunning ? <p>Jalankan kodenya untuk melihat output</p> : null}
-                        {stdout}
-                        {stderr}
-                        {isRunning && <span className="icon-[ri--loader-3-line] m-auto animate-spin text-2xl"></span>}
+                        <pre>
+                            <code>
+                                {!stdout && !stderr && !isRunning ? <p>Jalankan kodenya untuk melihat output</p> : null}
+                                {stdout}
+                                {stderr}
+                                {isRunning && (
+                                    <span className="icon-[ri--loader-3-line] m-auto animate-spin text-2xl"></span>
+                                )}
+                            </code>
+                        </pre>
                     </div>
                 </div>
             </div>
