@@ -13,11 +13,11 @@
     h4,
     h5,
     h6 {
-        @apply text-zinc-800 dark:text-zinc-200;
+        @apply text-slate-800 dark:text-slate-200;
     }
 
     p {
-        @apply text-zinc-500 dark:text-zinc-400;
+        @apply text-slate-500 dark:text-slate-400;
     }
 
     pre[data-theme*=" "] {

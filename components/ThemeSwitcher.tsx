@@ -21,7 +21,7 @@ const ThemeSwitcher = () => {
         if (currentTheme === "dark") {
             return (
                 <button
-                    className="grid h-10 w-10 place-items-center rounded-lg text-xl text-yellow-500 hover:bg-zinc-700"
+                    className="grid h-10 w-10 place-items-center rounded-lg text-xl text-yellow-500 hover:bg-slate-700"
                     onClick={() => setTheme("light")}
                 >
                     <span className="icon-[line-md--sun-rising-loop]"></span>
@@ -30,7 +30,7 @@ const ThemeSwitcher = () => {
         } else {
             return (
                 <button
-                    className="grid h-10 w-10 place-items-center rounded-lg text-xl text-zinc-600 hover:bg-zinc-200"
+                    className="grid h-10 w-10 place-items-center rounded-lg text-xl text-slate-600 hover:bg-slate-200"
                     onClick={() => setTheme("dark")}
                 >
                     <span className="icon-[line-md--moon-loop]"></span>
