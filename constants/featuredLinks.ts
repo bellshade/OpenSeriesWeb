@@ -13,7 +13,7 @@ export const featuredLinks = [
     {
         name: "Komunitas",
         icon: "icon-[solar--users-group-two-rounded-bold]",
-        href: "/community"
+        href: "/docs/community"
     },
     {
         name: "Playground",
