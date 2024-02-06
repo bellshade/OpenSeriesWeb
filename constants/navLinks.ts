@@ -9,7 +9,7 @@ export const navLinks = [
     },
     {
         name: "Komunitas",
-        href: "/community"
+        href: "/docs/community"
     },
     {
         name: "Request Fitur",

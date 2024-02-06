@@ -13,8 +13,8 @@ const Community = (props: Props) => {
             <div>
                 <h2>WPU</h2>
                 <iframe
-                    src={`https://discord.com/widget?id=722002048643497994`}
-                    className="aspect-square w-full overflow-hidden rounded-lg"
+                    src={`https://discord.com/widget?id=722002048643497994&theme=${theme}`}
+                    className="aspect-square w-full overflow-hidden rounded-lg border dark:border-zinc-700"
                     sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
                     title="Join discord WPU"
                 ></iframe>
@@ -22,10 +22,9 @@ const Community = (props: Props) => {
             <div>
                 <h2>Kelas Terbuka</h2>
                 <iframe
-                    src={`https://discord.com/widget?id=722002048643497994`}
-                    className="aspect-square w-full overflow-hidden rounded-lg"
+                    src={`https://discord.com/widget?id=882540885714305064&theme=${theme}`}
+                    className="aspect-square w-full overflow-hidden rounded-lg border dark:border-zinc-700"
                     sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-                    title="Join discord Kelas Terbuka"
                 ></iframe>
             </div>
         </div>
