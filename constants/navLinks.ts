@@ -5,7 +5,7 @@ export const navLinks = [
     },
     {
         name: "Kontribusi",
-        href: "/contribute"
+        href: "/docs/contribute"
     },
     {
         name: "Komunitas",
