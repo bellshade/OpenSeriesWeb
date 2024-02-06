@@ -18,7 +18,7 @@ const Navbar = (props: Props) => {
 
     return (
         <nav
-            className={`${isLanding ? landingStyle : docsStyle} inset-x-0 top-0 z-40 border-b bg-white/30 py-3 backdrop-blur-lg dark:border-slate-700 dark:bg-slate-800/30`}
+            className={`${isLanding ? landingStyle : docsStyle} inset-x-0 top-0 z-40 border-b bg-white/30 py-3 backdrop-blur-lg dark:border-zinc-700 dark:bg-zinc-800/30`}
         >
             <div className={`relative flex items-center justify-between ${isLanding && "container"}`}>
                 <Link
@@ -29,12 +29,12 @@ const Navbar = (props: Props) => {
                 </Link>
                 <div className="flex items-center gap-8">
                     <div
-                        className={`absolute inset-x-0 top-full mt-3 flex origin-top flex-col gap-x-8 gap-y-6 rounded-lg border bg-white p-12 shadow-2xl dark:border-slate-700 dark:bg-slate-800 lg:static lg:m-0 lg:flex-row lg:border-none lg:bg-transparent lg:p-0 lg:shadow-none dark:lg:bg-transparent ${isOpen ? "scale-y-100" : "scale-y-0 lg:scale-y-100"}`}
+                        className={`absolute inset-x-0 top-full mt-3 flex origin-top flex-col gap-x-8 gap-y-6 rounded-lg border bg-white p-12 shadow-2xl dark:border-zinc-700 dark:bg-zinc-800 lg:static lg:m-0 lg:flex-row lg:border-none lg:bg-transparent lg:p-0 lg:shadow-none dark:lg:bg-transparent ${isOpen ? "scale-y-100" : "scale-y-0 lg:scale-y-100"}`}
                     >
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
-                                className="text-lg text-slate-500 hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-500 lg:text-sm"
+                                className="text-lg text-zinc-500 hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-500 lg:text-sm"
                                 href={link.href}
                                 target={link.target}
                             >
@@ -48,7 +48,7 @@ const Navbar = (props: Props) => {
                                 key={link.name}
                                 href={link.href}
                                 target="_blank"
-                                className={`grid h-10 w-10  place-items-center rounded-lg text-xl text-slate-500 hover:bg-slate-200 dark:text-slate-400 dark:hover:bg-slate-700`}
+                                className={`grid h-10 w-10  place-items-center rounded-lg text-xl text-zinc-500 hover:bg-zinc-200 dark:text-zinc-400 dark:hover:bg-zinc-700`}
                             >
                                 <span className={link.icon}></span>
                             </Link>
@@ -56,7 +56,7 @@ const Navbar = (props: Props) => {
                         <ThemeSwitcher />
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className={`grid h-10 w-10 place-items-center  rounded-lg text-xl text-slate-500 hover:bg-slate-200 dark:text-slate-400 dark:hover:bg-slate-700 lg:hidden`}
+                            className={`grid h-10 w-10 place-items-center  rounded-lg text-xl text-zinc-500 hover:bg-zinc-200 dark:text-zinc-400 dark:hover:bg-zinc-700 lg:hidden`}
                         >
                             <span className="icon-[gg--menu]"></span>
                         </button>

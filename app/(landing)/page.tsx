@@ -27,7 +27,7 @@ export default function Home() {
                             >
                                 Get Started
                             </Link>
-                            <span className="flex flex-wrap items-center gap-2 text-slate-500 dark:text-slate-400">
+                            <span className="flex flex-wrap items-center gap-2 text-zinc-500 dark:text-zinc-400">
                                 By
                                 {projectByLinks.map((link) => (
                                     <Link
@@ -44,7 +44,7 @@ export default function Home() {
                     </div>
                     <LandingSvg
                         id="landing-svg"
-                        className="order-1 max-w-full stroke-slate-800 dark:stroke-white lg:order-2"
+                        className="order-1 max-w-full stroke-zinc-800 dark:stroke-white lg:order-2"
                     />
                 </div>
             </main>

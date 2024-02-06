@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            <body className={`${montserrat.className} dark:bg-slate-800`}>
+            <body className={`${montserrat.className} dark:bg-zinc-800`}>
                 <Provider>
                     <Navbar />
                     <NextTopLoader color="#4f46e5" />
