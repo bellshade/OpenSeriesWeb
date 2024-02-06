@@ -27,7 +27,7 @@ const Codeblock = ({ code }: Props) => {
         <div className="space-y-4">
             <div className="relative flex max-w-max divide-x divide-indigo-500 overflow-hidden rounded-lg">
                 <div
-                    className={`absolute inset-0 z-20 grid place-items-center rounded-lg border bg-white dark:border-zinc-700 dark:bg-zinc-900 ${isLoading ? "opacity-100" : "pointer-events-none opacity-0"}`}
+                    className={`absolute inset-0 z-20 grid place-items-center rounded-lg border bg-white dark:border-slate-700 dark:bg-slate-900 ${isLoading ? "opacity-100" : "pointer-events-none opacity-0"}`}
                 >
                     <span className="icon-[tabler--loader] animate-spin text-2xl"></span>
                 </div>
@@ -54,16 +54,16 @@ const Codeblock = ({ code }: Props) => {
                     Buka di Playground
                 </button>
             </div>
-            <div className="relative overflow-hidden rounded-xl border dark:border-zinc-700">
+            <div className="relative overflow-hidden rounded-xl border dark:border-slate-700">
                 <div
-                    className={`absolute inset-0 z-20 grid place-items-center bg-white dark:bg-zinc-900 ${isLoading ? "opacity-100" : "pointer-events-none opacity-0"}`}
+                    className={`absolute inset-0 z-20 grid place-items-center bg-white dark:bg-slate-900 ${isLoading ? "opacity-100" : "pointer-events-none opacity-0"}`}
                 >
-                    <span className="flex items-center gap-2 text-xl font-bold text-zinc-600 dark:text-zinc-400">
+                    <span className="flex items-center gap-2 text-xl font-bold text-slate-600 dark:text-slate-400">
                         <span className="icon-[tabler--loader] animate-spin text-2xl"></span>
                         Loading Environment
                     </span>
                 </div>
-                <div className="grid divide-x divide-y dark:divide-zinc-700 sm:grid-cols-2">
+                <div className="grid divide-x divide-y dark:divide-slate-700 sm:grid-cols-2">
                     <div>
                         <ReactCodeMirror
                             value={value}

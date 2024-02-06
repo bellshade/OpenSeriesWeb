@@ -19,7 +19,7 @@ const Contributor = async ({ username }: Props) => {
     });
 
     return (
-        <Link href={data.html_url} className="overflow-hidden rounded-lg border dark:border-zinc-700" target="_blank">
+        <Link href={data.html_url} className="overflow-hidden rounded-lg border dark:border-slate-700" target="_blank">
             <Image className="w-full" width={100} height={100} src={data.avatar_url} alt={String(data.name)} />
             <div className="space-y-2 p-3">
                 <p className="text-center text-sm">@{data.login}</p>
