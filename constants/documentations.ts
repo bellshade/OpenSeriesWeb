@@ -34,6 +34,14 @@ export const documentations = [
             {
                 title: "Persamaan Kuadrat",
                 href: "/docs/matematika/persamaan-kuadrat"
+            },
+            {
+                title: "Integral",
+                href: "/docs/matematika/integral"
+            },
+            {
+                title: "Turunan",
+                href: "/docs/matematika/turunan"
             }
         ]
     },
