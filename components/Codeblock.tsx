@@ -7,12 +7,14 @@ import ReactCodeMirror from "@uiw/react-codemirror";
 import { vscodeDark } from "@uiw/codemirror-theme-vscode";
 import { useTheme } from "next-themes";
 import { tomorrow } from "thememirror";
+import Link from "next/link";
 
 type Props = {
     code: string;
+    playseriesLink: string;
 };
 
-const Codeblock = ({ code }: Props) => {
+const Codeblock = ({ code, playseriesLink }: Props) => {
     const [value, setValue] = useState(code);
     const { systemTheme, theme } = useTheme();
     const currentTheme = theme === "system" ? systemTheme : theme;
@@ -47,12 +49,13 @@ const Codeblock = ({ code }: Props) => {
                 >
                     <span className="icon-[mdi--restart] h-6 w-6"></span>
                 </button>
-                <button
+                <Link
+                    href={playseriesLink}
+                    target="_blank"
                     className="flex items-center gap-2 bg-indigo-600 px-5 py-2.5 font-medium text-white hover:bg-indigo-700"
-                    onClick={() => alert("blm cuy")}
                 >
-                    Buka di Playground
-                </button>
+                    Buka di Playseries
+                </Link>
             </div>
             <div className="relative overflow-hidden rounded-xl border dark:border-zinc-700">
                 <div
