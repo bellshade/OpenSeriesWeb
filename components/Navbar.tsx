@@ -37,6 +37,7 @@ const Navbar = (props: Props) => {
                                 className="text-lg text-zinc-500 hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-500 lg:text-sm"
                                 href={link.href}
                                 target={link.target}
+                                onClick={() => setIsOpen(false)}
                             >
                                 {link.name}
                             </Link>
