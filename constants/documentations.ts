@@ -38,6 +38,14 @@ export const documentations = [
             {
                 title: "Faktorial",
                 href: "/docs/matematika/faktorial"
+            },
+            {
+                title: "Faktor Persekutuan Terbesar",
+                href: "/docs/matematika/fpb"
+            },
+            {
+                title: "Sigmoid",
+                href: "/docs/matematika/sigmoid"
             }
         ]
     },
