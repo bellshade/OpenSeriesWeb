@@ -16,9 +16,9 @@ export const featuredLinks = [
         href: "/docs/community"
     },
     {
-        name: "Playground",
+        name: "Playseries",
         icon: "icon-[solar--plain-3-bold]",
-        href: "https://play.openseries.pages.dev/",
+        href: "https://playseries.vercel.app",
         target: "_blank"
     }
 ];

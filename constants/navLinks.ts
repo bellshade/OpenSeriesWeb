@@ -18,7 +18,7 @@ export const navLinks = [
     },
     {
         name: "Playground",
-        href: "https://play.openseries.pages.dev/",
+        href: "https://playseries.vercel.app",
         target: "_blank"
     }
 ];
