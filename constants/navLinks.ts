@@ -17,7 +17,7 @@ export const navLinks = [
         target: "_blank"
     },
     {
-        name: "Playground",
+        name: "Playseries",
         href: "https://playseries.vercel.app",
         target: "_blank"
     }
