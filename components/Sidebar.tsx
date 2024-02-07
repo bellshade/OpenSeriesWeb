@@ -15,7 +15,7 @@ export default function Sidebar({}: Props) {
     return (
         <>
             <aside
-                className={`fixed inset-y-0 z-30 mt-16 flex min-w-[280px] max-w-[280px] flex-col gap-8 overflow-y-auto border-r bg-inherit p-8 dark:border-r-zinc-800 lg:translate-x-0 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+                className={`lg:tranzinc-x-0 fixed inset-y-0 z-30 mt-16 flex min-w-[280px] max-w-[280px] flex-col gap-8 overflow-y-auto border-r bg-inherit p-8 dark:border-r-zinc-800 ${isOpen ? "tranzinc-x-0" : "-tranzinc-x-full"}`}
             >
                 <div className="grid gap-2">
                     {featuredLinks.map((link) => (
@@ -23,6 +23,7 @@ export default function Sidebar({}: Props) {
                             href={link.href}
                             key={link.name}
                             target={link.target}
+                            onClick={() => setIsOpen(false)}
                             className="group flex items-center gap-2 font-medium text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300"
                         >
                             <div
