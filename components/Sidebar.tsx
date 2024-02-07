@@ -23,6 +23,7 @@ export default function Sidebar({}: Props) {
                             href={link.href}
                             key={link.name}
                             target={link.target}
+                            onClick={() => setIsOpen(false)}
                             className="group flex items-center gap-2 font-medium text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300"
                         >
                             <div

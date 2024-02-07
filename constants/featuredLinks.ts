@@ -2,7 +2,7 @@ export const featuredLinks = [
     {
         name: "Kontribusi",
         icon: "icon-[solar--heart-shine-bold]",
-        href: "/contribute"
+        href: "/docs/contribute"
     },
     {
         name: "Request Fitur",
@@ -13,12 +13,12 @@ export const featuredLinks = [
     {
         name: "Komunitas",
         icon: "icon-[solar--users-group-two-rounded-bold]",
-        href: "/community"
+        href: "/docs/community"
     },
     {
-        name: "Playground",
+        name: "Playseries",
         icon: "icon-[solar--plain-3-bold]",
-        href: "https://play.openseries.pages.dev/",
+        href: "https://playseries.vercel.app",
         target: "_blank"
     }
 ];

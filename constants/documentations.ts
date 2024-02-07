@@ -34,6 +34,18 @@ export const documentations = [
             {
                 title: "Persamaan Kuadrat",
                 href: "/docs/matematika/persamaan-kuadrat"
+            },
+            {
+                title: "Faktorial",
+                href: "/docs/matematika/faktorial"
+            },
+            {
+                title: "Faktor Persekutuan Terbesar",
+                href: "/docs/matematika/fpb"
+            },
+            {
+                title: "Sigmoid",
+                href: "/docs/matematika/sigmoid"
             }
         ]
     },
@@ -49,11 +61,11 @@ export const documentations = [
                 href: "/docs/fisika/energi-kinetik"
             },
             {
-                title: "Masa Jenis",
+                title: "Massa Jenis",
                 href: "/docs/fisika/masa-jenis"
             },
             {
-                title: "Energi Potensian",
+                title: "Energi Potensial",
                 href: "/docs/fisika/energi-potensial"
             },
             {

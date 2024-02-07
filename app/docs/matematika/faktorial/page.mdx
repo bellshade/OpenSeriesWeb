@@ -1,0 +1,42 @@
+import Codeblock from "@/components/Codeblock";
+
+# Faktorial
+
+Faktorial adalah operasi matematika yang menghitung hasil kali dari semua bilangan bulat positif yang kurang dari atau sama dengan bilangan tertentu. Faktorial dilambangkan dengan tanda seru (!) setelah bilangan. Misalnya, faktorial dari 5 ditulis sebagai 5! dan nilainya adalah 5 x 4 x 3 x 2 x 1 = 120. Rumus faktorial adalah:
+
+Rumus:
+
+```
+n! = n x (n—1) x (n—2) X ... x 2 x1
+```
+
+Keterangan:
+
+-   dengan n adalah bilangan bulat positif.
+
+Rumus faktorial ini biasa digunakan untuk menghitung banyaknya susunan atau permutasi yang dapat dibentuk dari sekumpulan objek tanpa memperhatikan urutannya. Misalnya, jika ada 4 huruf A, B, C, dan D, maka banyaknya cara menyusun huruf-huruf tersebut menjadi kata adalah 4! = 24. Faktorial juga digunakan dalam kombinatorik, aljabar, dan analisis matematika, seperti dalam teorema binomial, koefisien multinomial, dan fungsi gamma.
+
+Fungsi [sumber kode [disini](https://github.com/bellshade/OpenSeries/blob/main/OpenSeries/matematika.py#L201)]:
+
+```python
+def faktorial(nilai: int) -> Union[int, float, error.Error, error.ErrorTipeData]:
+```
+
+Contoh Kode:
+
+```python
+import OpenSeries.matematika as matematika
+
+nilai_faktorial = 25
+print(f"menghitung nilai faktorial dari angka {nilai_faktorial}")
+print(f"hasilnya adalah : {matematika.faktorial(nilai_faktorial)}\n")
+```
+
+## Coba Sekarang
+
+<Codeblock code={`import OpenSeries.matematika as matematika
+
+nilai_faktorial = 25
+print(f"menghitung nilai faktorial dari angka {nilai_faktorial}")
+print(f"hasilnya adalah : {matematika.faktorial(nilai_faktorial)}")
+`} playseriesLink='https://playseries.vercel.app/bkqgvjmp86h2i2atjtw4nxjj' />

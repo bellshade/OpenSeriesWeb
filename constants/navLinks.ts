@@ -5,11 +5,11 @@ export const navLinks = [
     },
     {
         name: "Kontribusi",
-        href: "/contribute"
+        href: "/docs/contribute"
     },
     {
         name: "Komunitas",
-        href: "/community"
+        href: "/docs/community"
     },
     {
         name: "Request Fitur",
@@ -17,8 +17,8 @@ export const navLinks = [
         target: "_blank"
     },
     {
-        name: "Playground",
-        href: "https://play.openseries.pages.dev/",
+        name: "Playseries",
+        href: "https://playseries.vercel.app",
         target: "_blank"
     }
 ];
