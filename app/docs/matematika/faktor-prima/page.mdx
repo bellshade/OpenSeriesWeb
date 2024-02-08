@@ -1,0 +1,44 @@
+import Codeblock from "@/components/Codeblock";
+
+# Faktor Prima
+
+Faktor prima adalah faktor-faktor suatu bilangan yang merupakan bilangan prima. Bilangan prima adalah bilangan yang hanya memiliki dua faktor, yaitu satu dan bilangan itu sendiri. Misalnya, 2, 3, 5, 7, 11, dan sebagainya adalah bilangan prima.
+
+Rumus faktor prima adalah cara untuk mencari faktor-faktor prima dari suatu bilangan dengan membagi bilangan tersebut secara berulang dengan bilangan-bilangan prima sampai didapat hasil bagi yang juga merupakan bilangan prima. Rumus faktor prima ini biasa digunakan untuk mencari Faktor Persekutuan Terbesar (FPB) dan Kelipatan Persekutuan Terkecil (KPK) dari dua atau lebih bilangan. Rumus faktor prima juga dapat digunakan untuk melakukan faktorisasi prima, yaitu menuliskan suatu bilangan sebagai hasil kali dari faktor-faktor prima.
+
+- Contoh:
+
+Cari faktor prima dari 60.
+
+Penyelesaian:
+
+60 = 2 x 30 30 = 2 x 15 15 = 3 x 5
+
+Jadi, faktor prima dari 60 adalah 2, 3, dan 5.
+
+Faktorisasi prima dari 60 adalah 60 = 2 x 2 x 3 x 5 = 2^2 x 3 x 5.
+
+Fungsi [sumber kode [disini](https://github.com/bellshade/OpenSeries/blob/8766497be42a76a175a94a84cc5609c94c015c61/OpenSeries/matematika.py#L316C12-L316C17)]:
+
+```python
+def faktor_prima(n: int) -> Union[list[int], error.Error, error.ErrorTipeData]:
+```
+
+Contoh Kode:
+
+```python
+import OpenSeries.matematika as matematika
+
+rentang_nilai = 60
+print(f"rentang nilai {rentang_nilai} faktor prima adalah {matematika.faktor_prima(rentang_nilai)}")
+
+```
+
+## Coba Sekarang
+
+<Codeblock code={`import OpenSeries.matematika as matematika
+
+rentang_nilai = 60
+print(f"rentang nilai {rentang_nilai} faktor prima adalah {matematika.faktor_prima(rentang_nilai)}")
+
+`} playseriesLink='https://playseries.vercel.app/bkqgvjmp86h2i2atjtw4nxjj' />
