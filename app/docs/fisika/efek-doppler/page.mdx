@@ -1,0 +1,63 @@
+import Codeblock from "@/components/Codeblock";
+
+# Efek Doppler
+
+Efek doppler adalah fenomena dimana saat terjadi perubahan frekuensi gelombang karena adanya sumber, dan detektor _atau_ pendengar.
+Contoh paling nyata terhadap efek doppler pada kehidupan sehari-hari yaitu saat kita sedang di luar gedung seperti di lapangan, atau saat mengendarai motor, ada suara sirine mobil polisi berstrobo lewat. Nah kan kalau strobo polisi dari jauh kan kecil tuh suara nya, tetapi semakin mendekat dengan kita, suara strobo mobil polisi itu pasti keras. Nah salah satu contoh tadi adalah penerapan efek doppler terhadap kehidupan sehari-hari kita.
+
+Rumus:
+
+```
+fp = fs * (v ± vp) / (v ± vs)
+```
+
+Ket: <br />
+fp = frekuensi yang didengar oleh pendengar (Hz) <br />
+fs = frekuensi yang dipancarkan oleh sumber (Hz) <br />
+v = kecepatan bunyi di udara (m/s) <br />
+vp = kecepatan pendengar bergerak (m/s) <br />
+vs = kecepatan sumber bunyi bergerak (m/s)
+
+Dalam rumus efek doppler, terdapat beberapa tanda. Diantara nya:
+
+-   vs bernilai positif (+) jika sumber bunyi menjauhi pendengar.
+-   vs bernilai negatif (-) jika sumber bunyi mendekati pendengar.
+-   vp bernilai positif (+) jika pendengar mendekati sumber bunyi.
+-   vp bernilai negatif (-) jika pendengar menjauhi sumber bunyi.
+
+Fungsi [sumber kode [disini](https://github.com/bellshade/OpenSeries/blob/main/OpenSeries/fisika.py)]
+
+```python
+def efek_doppler(
+    org_frek: Union[float, int],
+    gelombang_vel: Union[float, int],
+    obs_vel: Union[float, int],
+    src_vel: Union[float, int],
+) -> Union[float, error.ErrorDibagiNol, error.ErrorTipeData, error.Error]:
+```
+
+Contoh Kode
+
+```python
+import OpenSeries.fisika as fisika
+
+org_frek = 100
+gelombang_vel = 330
+obs_vel = 10
+src_vel = 0
+
+print(fisika.efek_doppler(org_frek, gelombang_vel, obs_vel, src_vel))
+```
+
+## Coba Sekarang
+
+<Codeblock
+code={`import OpenSeries.fisika as fisika
+
+org_frek = 100
+gelombang_vel = 330
+obs_vel = 10
+src_vel = 0
+
+print(fisika.efek_doppler(org_frek, gelombang_vel, obs_vel, src_vel))
+`} playseriesLink='https://playseries.vercel.app/cto3bvdxbop1emfs9w2xospn' />

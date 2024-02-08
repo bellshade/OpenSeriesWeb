@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const documentations = [
     {
         parent: "Get Started",
@@ -70,7 +72,7 @@ export const documentations = [
             },
             {
                 title: "Massa Jenis",
-                href: "/docs/fisika/masa-jenis"
+                href: "/docs/fisika/massa-jenis"
             },
             {
                 title: "Energi Potensial",
@@ -79,6 +81,22 @@ export const documentations = [
             {
                 title: "Hukum Ohm",
                 href: "/docs/fisika/hukum-ohm"
+            },
+            {
+                title: "Efek Doppler",
+                href: "/docs/fisika/efek-doppler"
+            },
+            {
+                title: "Tekanan Barometrik",
+                href: "/docs/fisika/tekanan-barometrik"
+            },
+            {
+                title: "Percepatan",
+                href: "/docs/fisika/percepatan"
+            },
+            {
+                title: "Gaya Sentripetal",
+                href: "/docs/fisika/gaya-sentripetal"
             }
         ]
     },
