@@ -20,7 +20,7 @@ Proyek ini menggunakan Next.js sebagai framework, serta Bun sebagai package mana
     git clone https://github.com/username/OpenSeriesWeb.git
     ```
     Ganti `username` degan username Anda.
-3. Masuk ke folder hasil close, lalu pindahkan branch ke branch `develop`:
+3. Masuk ke folder hasil clone, lalu pindahkan branch ke branch `develop`:
     ```bash
     git checkout develop
     ```
