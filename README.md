@@ -1,6 +1,6 @@
 # Website OpenSeries
 
-Selamat datang di repositori OpenSeries! Repositori ini berisi kode sumber untuk website OpenSeries. Kami menggunakan runtime dan package manager dari Bun, jadi jika Anda ingin berkontribusi, pastikan untuk menginstal Bun terlebih dahulu dengan mengacu pada dokumentasi resmi di https://bun.sh/.
+Selamat datang di repositori OpenSeries! Repositori ini berisi kode sumber untuk website OpenSeries. Kami menggunakan runtime dan package manager dari Bun, jadi jika Anda ingin berkontribusi, pastikan untuk menginstal Bun terlebih dahulu dengan mengacu pada dokumentasi resmi di [website bun](https://bun.sh/).
 
 ## Memulai
 
