@@ -46,7 +46,12 @@ export const documentations = [
             {
                 title: "Sigmoid",
                 href: "/docs/matematika/sigmoid"
-            }
+            },
+            {
+                title: "Faktor Prima",
+                href: "/docs/matematika/faktor-prima"
+            },
+            
         ]
     },
     {
