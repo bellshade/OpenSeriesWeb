@@ -76,17 +76,15 @@ const Codeblock = ({ code, playseriesLink }: Props) => {
                             onChange={onChange}
                         />
                     </div>
-                    <div className="flex p-8">
+                    <div className="flex overflow-x-auto p-8">
                         <pre>
                             <code>
                                 {!stdout && !stderr && !isRunning ? <p>Jalankan kodenya untuk melihat output</p> : null}
                                 {stdout}
                                 {stderr}
-                                {isRunning && (
-                                    <span className="icon-[ri--loader-3-line] m-auto animate-spin text-2xl"></span>
-                                )}
                             </code>
                         </pre>
+                        {isRunning && <span className="icon-[ri--loader-3-line] m-auto animate-spin text-2xl"></span>}
                     </div>
                 </div>
             </div>
