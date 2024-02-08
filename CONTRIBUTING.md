@@ -20,24 +20,22 @@ Proyek ini menggunakan Next.js sebagai framework, serta Bun sebagai package mana
     git clone https://github.com/username/OpenSeriesWeb.git
     ```
     Ganti `username` degan username Anda.
-3. Pindah ke branch `develop`:
+3. Masuk ke folder hasil close, lalu pindahkan branch ke branch `develop`:
     ```bash
     git checkout develop
     ```
-4. Buat branch baru sesuai fitur atau perbaikan yang akan Anda tambahkan:
+4. Setup pre-commit
+    - Install sesuai panduan resmi di https://pre-commit.com/#install
+    - Jalankan `pre-commit install`
+5. Buat branch baru sesuai fitur atau perbaikan yang akan Anda tambahkan:
     ```bash
     git checkout -b nama-branch
     ```
-5. Jalankan website menggunakan `bun dev`:
+6. Jalankan website menggunakan `bun dev`:
     ```bash
     bun dev
     ```
-6. Lakukan perbaikan atau penambahan pada website.
-7. Sebelum melakukan commit, pastikan:
-    - Semua berjalan lancar di website.
-    - Jalankan `bun format` untuk melakukan formatting menggunakan Prettier.
-    - Jalankan `bun lint` untuk melakukan lint menggunakan ESLint.
-    - Perbaiki jika ada error saat menjalankan `bun lint`.
+7. Lakukan perbaikan atau penambahan pada website.
 8. Jika semua sudah sesuai, lakukan commit dan push perubahan Anda.
 9. Lakukan pull request ke branch `develop` di reposotory ini.
 
