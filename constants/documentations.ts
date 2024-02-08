@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const documentations = [
     {
         parent: "Get Started",
@@ -34,6 +36,38 @@ export const documentations = [
             {
                 title: "Persamaan Kuadrat",
                 href: "/docs/matematika/persamaan-kuadrat"
+            },
+            {
+                title: "Integral",
+                href: "/docs/matematika/integral"
+            },
+            {
+                title: "Turunan",
+                href: "/docs/matematika/turunan"
+            },
+            {
+                title: "Faktorial",
+                href: "/docs/matematika/faktorial"
+            },
+            {
+                title: "Faktor Persekutuan Terbesar",
+                href: "/docs/matematika/fpb"
+            },
+            {
+                title: "Sigmoid",
+                href: "/docs/matematika/sigmoid"
+            },
+            {
+                title: "Faktor Prima",
+                href: "/docs/matematika/faktor-prima"
+            },
+            {
+                title: "Distribusi binomial",
+                href: "/docs/matematika/distribusi-binomial"
+            },
+            {
+                title: "Peluang Kejadian",
+                href: "/docs/matematika/peluang-kejadian"
             }
         ]
     },
@@ -49,16 +83,32 @@ export const documentations = [
                 href: "/docs/fisika/energi-kinetik"
             },
             {
-                title: "Masa Jenis",
-                href: "/docs/fisika/masa-jenis"
+                title: "Massa Jenis",
+                href: "/docs/fisika/massa-jenis"
             },
             {
-                title: "Energi Potensian",
+                title: "Energi Potensial",
                 href: "/docs/fisika/energi-potensial"
             },
             {
                 title: "Hukum Ohm",
                 href: "/docs/fisika/hukum-ohm"
+            },
+            {
+                title: "Efek Doppler",
+                href: "/docs/fisika/efek-doppler"
+            },
+            {
+                title: "Tekanan Barometrik",
+                href: "/docs/fisika/tekanan-barometrik"
+            },
+            {
+                title: "Percepatan",
+                href: "/docs/fisika/percepatan"
+            },
+            {
+                title: "Gaya Sentripetal",
+                href: "/docs/fisika/gaya-sentripetal"
             }
         ]
     },
@@ -72,6 +122,27 @@ export const documentations = [
             {
                 title: "Standar Deviasi",
                 href: "/docs/statistika/standar-deviasi"
+            }
+        ]
+    },
+    {
+        parent: "Bilangan Spesial",
+        childs: [
+            {
+                title: "Bilangan Armstrong",
+                href: "/docs/bilangan/bilangan-armstrong"
+            },
+            {
+                title: "Bilangan Automorphic",
+                href: "/docs/bilangan/bilangan-automorphic"
+            },
+            {
+                title: "Bilangan Pronic",
+                href: "/docs/bilangan/bilangan-pronic"
+            },
+            {
+                title: "Bilangan Segitiga",
+                href: "/docs/bilangan/bilangan-segitiga"
             }
         ]
     }

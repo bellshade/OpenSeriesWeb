@@ -1,0 +1,50 @@
+import Codeblock from "@/components/Codeblock";
+
+# Gaya Sentripetal
+
+Gaya sentripetal merupakan gaya yang membuat benda bergerak melingkar.
+Benda dapat bergerak melingkar karena benda yang diputar tersebut memiliki percepatan
+menuju pusat lingkaran. Percepatan itu disebut dengan percepatan sentripetal.
+Percepatan sentripetal disebabkan oleh gaya yang menuju ke pusat lingkaran atau disebut
+gaya sentripental.
+Gaya sentripetal dapat diamati jika menggunakan kerangka acuan inersial, yaitu kerangka acuan
+yang diam ataupun bergerak dengan kecepatan konstan terhadap bumi. Contohnya adalah ketika kita
+melihat benda berputar. Misalnya, bola yang diikatkan ke ujung tali diputarkan secara horizontal,
+gaya sentripetal akan membuat bola terus ditarik ke arah pusat sehingga bergerak secara melingkar.
+Gaya sentripetal ialah gaya dari tegangan tali yang diikatkan terhadap bola.
+
+Rumus:
+
+```
+Fs = m * (v² / r)
+```
+
+ket: <br />
+Fs = Gaya Sentripetal (N) <br />
+v = Kecepatan Linear (m/s) <br />
+r = Jari-Jari Lintasan (m) <br />
+
+Fungsi [sumber kode [disini](https://github.com/bellshade/OpenSeries/blob/main/OpenSeries/fisika.py)]
+
+```python
+def gaya_sentripental(
+    massa: Union[float, int], velocity: Union[float, int], radius: Union[float, int]
+) -> Union[float, int, error.Error, error.ErrorTipeData]:
+```
+
+Contoh Kode
+
+```python
+import OpenSeries.fisika as fisika
+
+hasil = round(fisika.gaya_sentripental(10, 15, 5))
+print(hasil)
+```
+
+## Coba Sekarang
+
+<Codeblock code={`import OpenSeries.fisika as fisika
+
+hasil = round(fisika.gaya_sentripental(10, 15, 5))
+print(hasil)
+`} playseriesLink="https://playseries.vercel.app/kvorxorlw60bq5uhz937em7k" />

@@ -1,0 +1,42 @@
+import Codeblock from "@/components/Codeblock";
+
+# Integral
+
+Integral Merupakan konsep dalam Kalkulus yang memungkinkan kita untuk mengukur
+akumulasi nilai suatu fungsi di seluruh interval tertentu. Ini memungkinkan
+analisis tentang luas area di bawah kurva fungsi, serta berbagai aspek lain dari perubahan dalam suatu sistem.
+
+Rumus:
+
+```
+\int_{a}^{b} f(x) \,dx
+```
+
+Fungsi [sumber kode [disini](https://github.com/bellshade/OpenSeries/blob/8766497be42a76a175a94a84cc5609c94c015c61/OpenSeries/matematika.py#L527)]
+
+```python
+def turunan(f: Callable[[float], float], x: Union[int, float]) -> float:
+```
+
+Contoh kode
+
+```python
+import OpenSeries.matematika as matematika
+
+def f(x):
+  return x**2
+a = 0
+b = 3
+print(matematika.integral(f,a,b))
+```
+
+## Coba Sekarang
+
+<Codeblock code={`import OpenSeries.matematika as matematika
+
+def f(x):
+\treturn x\*\*1
+a = 0
+b = 3
+print(matematika.integral(f,a,b))
+`} playseriesLink='https://playseries.vercel.app/kkevx28gec8rnwlijumbgw3e' />

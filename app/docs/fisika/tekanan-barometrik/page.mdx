@@ -1,0 +1,54 @@
+import Codeblock from "@/components/Codeblock";
+
+# Tekanan Barometrik
+
+Tekanan barometrik adalah tekanan yang dihasilkan oleh berat kolom udara di atas suatu titik
+di permukaan bumi. Pengukuran tekanan barometrik penting untuk memahami cuaca,
+memprediksi perubahan iklim, dan memiliki aplikasi yang luas dalam berbagai bidang.
+Tekanan barometrik dapat bervariasi tergantung pada ketinggian tempat tersebut di atas permukaan laut.
+Semakin tinggi ketinggian suatu lokasi, semakin rendah tekanan barometriknya. Ini disebabkan oleh
+adanya perbedaan dalam berat kolom udara di atas lokasi tersebut. Di ketinggian yang lebih rendah,
+kolom udara di atasnya lebih tebal, sehingga menimbulkan tekanan udara yang lebih besar.
+
+Rumus
+
+```
+Ph = (Pu - h) / 100
+```
+
+ket: <br />
+Ph = Tekanan udara pada ketinggian h <br />
+Pu = Tekanan udara permukaan air laut <br />
+h = Tinggi tempat <br />
+
+Fungsi [sumber kode [disini](https://github.com/bellshade/OpenSeries/blob/main/OpenSeries/fisika.py)]
+
+```python
+def ketinggian_barometrik(
+    tekanan: float,
+) -> Union[float, error.ErrorTipeData, error.Error]:
+```
+
+Contoh Kode:
+
+```python
+import OpenSeries.fisika as fisika
+
+tekanan = 100_000.0
+
+hasil = fisika.ketinggian_barometrik(tekanan)
+print(f"tekanan: {tekanan} Pa, Ketinggian adalah: {hasil} meter")
+```
+
+## Coba Sekarang
+
+<Codeblock 
+code={`import OpenSeries.fisika as fisika
+
+tekanan = 100_000.0
+
+hasil = fisika.ketinggian_barometrik(tekanan)
+print(f"tekanan: {tekanan} Pa, Ketinggian adalah: {hasil} meter")
+`}
+playseriesLink='https://playseries.vercel.app/wsc56lm3lazbr0xzakzvz0ky'
+/>

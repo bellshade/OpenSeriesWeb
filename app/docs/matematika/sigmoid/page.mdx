@@ -1,0 +1,41 @@
+import Codeblock from "@/components/Codeblock";
+
+# Sigmoid
+
+Sigmoid adalah kurva berbentuk S yang sering digunakan untuk memodelkan berbagai fenomena, seperti pertumbuhan populasi, respons neuron, dan probabilitas dalam regresi logistik.
+
+Rumus:
+
+```
+f(x) = L / (1 + e^(-k(x-x0)))
+```
+
+Keterangan: - f(x) adalah nilai kurva pada titik x - L adalah nilai maksimum kurva - k adalah parameter yang mengontrol kemiringan kurva - x0 parameter yang mengtrol titik tengah kurva
+
+Fungsi [sumber kode [disini](https://github.com/bellshade/OpenSeries/blob/8ebbcf8378a1d7747f4c53f59f4bfbfe9f3972e8/OpenSeries/matematika.py#L457)]:
+
+```python
+def sigmoid(vektor: np.ndarray) -> Union[error.ErrorTipeData, np.ndarray]:
+```
+
+Contoh Kode:
+
+```python
+import OpenSeries.matematika as matematika
+import numpy as np
+
+# membuat fungsi sigmoid
+array = np.array([-1.0, 1.0, 2.0])
+print(matematika.sigmoid(array))
+```
+
+## Coba Sekarang
+
+<Codeblock code={`import OpenSeries.matematika as matematika
+import numpy as np
+
+# membuat fungsi sigmoid
+
+array = np.array([-1.0, 1.0, 2.0])
+print(matematika.sigmoid(array))
+`} playseriesLink='https://playseries.vercel.app/so9r0d7dn1kqmtwptjms7mpi' />

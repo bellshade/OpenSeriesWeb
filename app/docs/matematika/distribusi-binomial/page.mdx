@@ -1,0 +1,45 @@
+import Codeblock from "@/components/Codeblock";
+
+# Distribusi Binomial
+
+Distribusi binomial adalah distribusi probabilitas yang menggambarkan jumlah keberhasilan dalam serangkaian percobaan independen, di mana setiap percobaan memiliki dua kemungkinan hasil: sukses atau gagal.
+
+Rumus:
+
+```
+P(k) = nCk * p^k * (1-p)^(n-k)
+```
+
+Keterangan: - nCk: Kombinasi n elemen diambil k elemen. - p^k: Probabilitas k kali sukses berturut-turut. - (1-p)^(n-k): Probabilitas n-k kali gagal berturut-turut.
+
+Fungsi [sumber kode [disini](https://github.com/bellshade/OpenSeries/blob/8766497be42a76a175a94a84cc5609c94c015c61/OpenSeries/matematika.py#L470)]:
+
+```python
+def distribusi_binomial(
+    keberhasilan: int,
+    percobaan: int,
+    probabilitas: Union[float, int],
+) -> Union[float, error.ErrorTipeData, error.ErrorValue]:
+```
+
+Contoh Kode:
+
+```python
+import OpenSeries.matematika as matematika
+
+print(
+    "distribusi binomial dengan keberhasilan 3, percobaan 5, dan probabilitas 0.7 (70%)"
+)
+print(f"hasilnya adalah {matematika.distribusi_binomial(3, 5, 0.7)}")
+
+```
+
+## Coba Sekarang
+
+<Codeblock code={`import OpenSeries.matematika as matematika
+
+print(
+\t"distribusi binomial dengan keberhasilan 3, percobaan 5, dan probabilitas 0.7 (70%)"
+)
+print(f"hasilnya adalah {matematika.distribusi_binomial(3, 5, 0.7)}")
+`} playseriesLink='https://playseries.vercel.app/idizuvuump07bnd3ryej8xy6' />

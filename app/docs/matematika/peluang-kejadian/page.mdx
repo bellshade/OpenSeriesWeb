@@ -1,0 +1,52 @@
+import Codeblock from "@/components/Codeblock";
+
+# Peluang Kejadian
+
+Peluang Kejadian adalah ukuran kemungkinan terjadinya suatu kejadian dari sejumlah kemungkinan yang ada. Peluang kejadian biasanya dinyatakan dalam bentuk pecahan, desimal, atau persen. Rumus peluang kejadian adalah:
+
+```
+P(A)  =  n(S)  /  n(A)
+```
+
+Keterangan:
+
+-   P(A) adalah peluang kejadian A
+-   n(A) adalah jumlah titik sampel yang terkait dengan kejadian A
+-   n(S) adalah jumlah seluruh titik sampel dalam ruang sampel S
+
+Rumus peluang kejadian ini biasa digunakan untuk menghitung peluang suatu kejadian sederhana, yaitu kejadian yang hanya terdiri dari satu titik sampel atau satu hasil. Misalnya, peluang mendapatkan angka 6 saat melempar dadu, peluang mendapatkan kartu As saat mengambil satu kartu dari setumpuk kartu, atau peluang mendapatkan mata uang rupiah saat mengambil satu uang kertas dari dompet.
+
+Fungsi [sumber kode [disini](https://github.com/bellshade/OpenSeries/blob/8766497be42a76a175a94a84cc5609c94c015c61/OpenSeries/matematika.py#L352)]:
+
+```python
+def peluang_kejadian(
+    kejadian: Union[int, float], ukuran_sampel: Union[int, float]
+) -> Union[int, float, error.ErrorTipeData, error.ErrorDibagiNol]:
+```
+
+Contoh Kode:
+
+```python
+import OpenSeries.matematika as matematika
+
+nilai_A = 5
+nilai_S = 10
+
+print("menghitung probabilitas suatu kejadian")
+print(f"dengan jumlah hasil yang menguntungkan :{nilai_A}")
+print(f"dan dengan ukuran ruang sampel {nilai_S}")
+print(f"probabilitas dari kejadiannya adalah: {matematika.peluang_kejadian(nilai_A, nilai_S)}")
+```
+
+## Coba Sekarang
+
+<Codeblock code={`import OpenSeries.matematika as matematika
+
+nilai_A = 5
+nilai_S = 10
+
+print("menghitung probabilitas suatu kejadian")
+print(f"dengan jumlah hasil yang menguntungkan :{nilai_A}")
+print(f"dan dengan ukuran ruang sampel {nilai_S}")
+print(f"probabilitas dari kejadiannya adalah: {matematika.peluang_kejadian(nilai_A, nilai_S)}")
+`} playseriesLink='https://playseries.vercel.app/hgskwoiqa9ibkcthzqwsqwqn' />

@@ -1,0 +1,32 @@
+import Codeblock from "@/components/Codeblock";
+
+# Bilangan Pronic
+
+Bilangan pronic adalah bilangan bulat positif yang merupakan hasil perkalian dua bilangan bulat berurutan.
+
+-   Contoh:
+    -   6 adalah bilangan pronic karena 6 = 2 \* 3.
+    -   12 adalah bilangan pronic karena 12 = 3 \* 4.
+
+Fungsi [sumber kode [disini](https://github.com/bellshade/OpenSeries/blob/8766497be42a76a175a94a84cc5609c94c015c61/OpenSeries/bilangan_istimewa.py#L70)]:
+
+```python
+def angka_pronic(angka: int) -> Union[str, error.ErrorTipeData]:
+```
+
+Contoh Kode:
+
+```python
+import OpenSeries.bilangan_istimewa as bilangan
+
+contoh_angka = 30
+print(f"{contoh_angka} adalah {bilangan.angka_pronic(contoh_angka)}")
+```
+
+## Coba Sekarang
+
+<Codeblock code={`import OpenSeries.bilangan_istimewa as bilangan
+
+contoh_angka = 30
+print(f"{contoh_angka} adalah {bilangan.angka_pronic(contoh_angka)}")
+`} playseriesLink='https://playseries.vercel.app/wkkoc3l3247y3sfn7ltks0x9' />

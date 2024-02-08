@@ -1,0 +1,60 @@
+import Codeblock from "@/components/Codeblock";
+
+# Percepatan
+
+Percepatan atau dalam Bahasa Inggris disebut acceleration adalah perubahan kecepatan yang terjadi
+setiap satuan waktu (s). Nilai percepatan itu tetap, bergantung pada perubahan kecepatannya.
+Percepatan merupakan besaran vektor, sehingga memiliki besar dan arah. Jika gerak suatu benda
+semakin cepat, maka perubahan kecepatan setiap detiknya juga semakin besar. Artinya, percepatannya
+bernilai positif. Sebaliknya, jika gerak benda melambat, maka perubahan kecepatan setiap detiknya
+akan bernilai negatif.
+Percepatan dapat diartikan sebagai perubahan kecepatan suatu benda dalam selang waktu tertentu.
+Jika kecepatan suatu benda bertambah, maka percepatannya bernilai positif. Sebaliknya,
+jika kecepatan suatu benda berkurang, maka percepatannya bernilai negatif.
+
+Rumus:
+
+```
+a = Δv/Δt
+```
+
+yang berarti:
+
+```
+a = (v2 - v1) / (t2 - t1)
+```
+
+ket: <br />
+a = percepatan rata-rata (m/s<sup>2</sup>) <br />
+Δv = perubahan kecepatan (m/s) <br />
+Δt = perubahan waktu (s) <br />
+v1, v2 = kecepatan awal, kecepatan akhir (m/s) <br />
+t1, t2 = waktu awal, waktu akhir (s) <br />
+
+Fungsi [sumber kode [disini](https://github.com/bellshade/OpenSeries/blob/main/OpenSeries/fisika.py)]
+
+```python
+def percepatan(
+    kecepatan: Union[float, int], waktu: Union[float, int]
+) -> Union[float, error.ErrorDibagiNol, error.ErrorTipeData]:
+```
+
+Contoh Kode
+
+```python
+import OpenSeries.fisika as fisika
+
+print("hitung percepatan")
+result_percepatan = fisika.percepatan(4, 2.3)
+print(f"hasil dari percepatan adalah: {result_percepatan}\n")
+```
+
+## Contoh Kode
+
+<Codeblock 
+code={`import OpenSeries.fisika as fisika
+
+print("hitung percepatan")
+result_percepatan = fisika.percepatan(4, 2.3)
+print(f"hasil dari percepatan adalah: {result_percepatan}")
+`} playseriesLink='https://playseries.vercel.app/jf1z16hnp4e8wea5dzagd9q1' />

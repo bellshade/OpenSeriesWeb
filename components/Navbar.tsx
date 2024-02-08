@@ -29,7 +29,7 @@ const Navbar = (props: Props) => {
                 </Link>
                 <div className="flex items-center gap-8">
                     <div
-                        className={`absolute inset-x-0 top-full mt-3 flex origin-top flex-col gap-x-8 gap-y-6 rounded-lg border bg-white p-12 shadow-2xl dark:border-zinc-700 dark:bg-zinc-800 lg:static lg:m-0 lg:flex-row lg:border-none lg:bg-inherit lg:p-0 lg:shadow-none ${isOpen ? "scale-y-100" : "scale-y-0 lg:scale-y-100"}`}
+                        className={`absolute inset-x-0 top-full mt-3 flex origin-top flex-col gap-x-8 gap-y-6 rounded-lg border bg-white p-12 shadow-2xl dark:border-zinc-700 dark:bg-transparent lg:static lg:m-0 lg:flex-row lg:border-none lg:bg-inherit lg:p-0 lg:shadow-none ${isOpen ? "scale-y-100" : "scale-y-0 lg:scale-y-100"}`}
                     >
                         {navLinks.map((link) => (
                             <Link
@@ -37,6 +37,7 @@ const Navbar = (props: Props) => {
                                 className="text-lg text-zinc-500 hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-500 lg:text-sm"
                                 href={link.href}
                                 target={link.target}
+                                onClick={() => setIsOpen(false)}
                             >
                                 {link.name}
                             </Link>
