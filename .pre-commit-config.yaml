@@ -11,7 +11,9 @@ repos:
       rev: "v4.0.0-alpha.8"
       hooks:
           - id: prettier
-            types: [tsx]
+            additional_dependencies:
+                - prettier@^3.2.2
+                - prettier-plugin-tailwindcss@^0.5.11
 
     # pre commit dari eslint
     - repo: https://github.com/pre-commit/mirrors-eslint
@@ -20,3 +22,8 @@ repos:
           - id: eslint
             files: \.[jt]sx?$
             types: [file]
+            additional_dependencies:
+                - eslint@^8.56.0
+                - eslint-config-next@14.0.4
+                - eslint-config-prettier@^9.1.0
+                - eslint-plugin-prettier@^5.1.3
