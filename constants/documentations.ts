@@ -51,6 +51,10 @@ export const documentations = [
                 title: "Faktor Prima",
                 href: "/docs/matematika/faktor-prima"
             },
+            {
+                title: "Peluang Kejadian",
+                href: "/docs/matematika/peluang-kejadian"
+            }
             
         ]
     },
