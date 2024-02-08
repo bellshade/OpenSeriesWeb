@@ -73,6 +73,7 @@
         100% {
             opacity: 0;
         }
+
         50% {
             stroke-dashoffset: 0;
             opacity: 100;
