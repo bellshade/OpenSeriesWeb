@@ -7,12 +7,14 @@ import ReactCodeMirror from "@uiw/react-codemirror";
 import { vscodeDark } from "@uiw/codemirror-theme-vscode";
 import { useTheme } from "next-themes";
 import { tomorrow } from "thememirror";
+import Link from "next/link";
 
 type Props = {
     code: string;
+    playseriesLink: string;
 };
 
-const Codeblock = ({ code }: Props) => {
+const Codeblock = ({ code, playseriesLink }: Props) => {
     const [value, setValue] = useState(code);
     const { systemTheme, theme } = useTheme();
     const currentTheme = theme === "system" ? systemTheme : theme;
@@ -24,7 +26,7 @@ const Codeblock = ({ code }: Props) => {
     const { runPython, stdout, stderr, isLoading, isRunning } = usePython();
 
     return (
-        <div className="space-y-4">
+        <div className="not-prose space-y-4">
             <div className="relative flex max-w-max divide-x divide-indigo-500 overflow-hidden rounded-lg">
                 <div
                     className={`absolute inset-0 z-20 grid place-items-center rounded-lg border bg-white dark:border-zinc-700 dark:bg-zinc-900 ${isLoading ? "opacity-100" : "pointer-events-none opacity-0"}`}
@@ -47,12 +49,13 @@ const Codeblock = ({ code }: Props) => {
                 >
                     <span className="icon-[mdi--restart] h-6 w-6"></span>
                 </button>
-                <button
+                <Link
+                    href={playseriesLink}
+                    target="_blank"
                     className="flex items-center gap-2 bg-indigo-600 px-5 py-2.5 font-medium text-white hover:bg-indigo-700"
-                    onClick={() => alert("blm cuy")}
                 >
-                    Buka di Playground
-                </button>
+                    Buka di Playseries
+                </Link>
             </div>
             <div className="relative overflow-hidden rounded-xl border dark:border-zinc-700">
                 <div
@@ -74,10 +77,16 @@ const Codeblock = ({ code }: Props) => {
                         />
                     </div>
                     <div className="flex p-8">
-                        {!stdout && !stderr && !isRunning ? <p>Jalankan kodenya untuk melihat output</p> : null}
-                        {stdout}
-                        {stderr}
-                        {isRunning && <span className="icon-[ri--loader-3-line] m-auto animate-spin text-2xl"></span>}
+                        <pre>
+                            <code>
+                                {!stdout && !stderr && !isRunning ? <p>Jalankan kodenya untuk melihat output</p> : null}
+                                {stdout}
+                                {stderr}
+                                {isRunning && (
+                                    <span className="icon-[ri--loader-3-line] m-auto animate-spin text-2xl"></span>
+                                )}
+                            </code>
+                        </pre>
                     </div>
                 </div>
             </div>

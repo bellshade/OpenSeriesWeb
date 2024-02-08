@@ -4,7 +4,17 @@ import rehypePrettyCode from "rehype-pretty-code";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    pageExtensions: ["js", "jsx", "mdx", "md", "ts", "tsx"]
+    pageExtensions: ["js", "jsx", "mdx", "md", "ts", "tsx"],
+    images: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "avatars.githubusercontent.com",
+                port: "",
+                pathname: "/**"
+            }
+        ]
+    }
 };
 
 const options = {

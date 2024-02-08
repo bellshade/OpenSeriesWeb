@@ -1,0 +1,41 @@
+name: Pull Request Build
+
+on:
+    pull_request:
+        branches:
+            - develop
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+            - uses: oven-sh/setup-bun@v1
+              with:
+                  bun-version: latest
+
+            - name: Build Next.js
+              run: |
+                  bun install --frozen-lockfile
+                  bun lint
+                  bun run build
+
+            - name: Check Build Status
+              run: |
+                  if [ $? -eq 0 ]; then
+                    echo "Build successful"
+                  else
+                    echo "Build failed. Exiting..."
+                    exit 1
+                  fi
+
+            - name: Comment on Pull Request (on failure)
+              if: failure()
+              env:
+                  GH_TOKEN: ${{ secrets.WF_TOKEN }}
+                  PR: ${{ github.event.pull_request.html_url }}
+              run: |
+                  gh pr edit $PR --add-label 'invalid'
+                  gh pr comment $PR --body 'The build for this pull request was not successful. Please review the logs for more details AND please review our [contributing guidelines](https://github.com/Bellshade/OpenSeriesWeb/blob/main/CONTRIBUTING.md).'
