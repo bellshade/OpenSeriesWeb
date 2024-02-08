@@ -1,0 +1,40 @@
+import Codeblock from "@/components/Codeblock";
+
+# Bilangan Segitiga
+
+Angka segitiga adalah bilangan bulat positif yang dapat dibentuk dengan menyusun benda-benda dalam bentuk segitiga sama sisi.
+
+-   Contoh:
+    -   1 adalah angka segitiga karena dapat dibentuk dengan menyusun 1 benda dalam bentuk segitiga sama sisi.
+    -   3 adalah angka segitiga karena dapat dibentuk dengan menyusun 3 benda dalam bentuk segitiga sama sisi.
+
+Rumus:
+
+```
+T_n = n(n+1)/2
+```
+
+Keterangan: - n: adalah bilangan bulat positif
+
+Fungsi [sumber kode [disini](https://github.com/bellshade/OpenSeries/blob/8766497be42a76a175a94a84cc5609c94c015c61/OpenSeries/bilangan_istimewa.py#L99)]:
+
+```python
+def angka_segitiga(angka: int) -> Union[int, error.ErrorTipeData, error.Error]:
+```
+
+Contoh Kode:
+
+```python
+import OpenSeries.bilangan_istimewa as bilangan
+
+angka = 3
+print(f"angka segitiga dari {angka} adalah {bilangan.angka_segitiga(angka)}")
+```
+
+## Coba Sekarang
+
+<Codeblock code={`import OpenSeries.bilangan as bilangan
+
+angka = 3
+print(f"angka segitiga dari {angka} adalah {bilangan.angka_segitiga(angka)}")
+`} playseriesLink='https://playseries.vercel.app/bkqgvjmp86h2i2atjtw4nxjj' />

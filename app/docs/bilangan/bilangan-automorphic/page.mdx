@@ -1,0 +1,34 @@
+import Codeblock from "@/components/Codeblock";
+
+# Angka Automorphic
+
+Angka automorphic adalah bilangan bulat positif dalam basis bilangan tertentu yang kuadratnya "berakhir" dengan digit yang sama dengan bilangan itu sendiri.
+
+Contoh: - Dalam basis 10, 5 adalah angka automorphic karena 5^2 = 25, dan digit terakhir 25 sama dengan digit terakhir 5. - Dalam basis 12, 1 adalah angka automorphic karena 1^2 = 1, dan digit terakhir 1 sama dengan digit terakhir 1.
+
+Fungsi [sumber kode [disini](https://github.com/bellshade/OpenSeries/blob/8766497be42a76a175a94a84cc5609c94c015c61/OpenSeries/bilangan_istimewa.py#L37)]:
+
+```python
+def angka_automorphic(angka: int) -> Union[str, error.ErrorTipeData]:
+```
+
+Contoh Kode:
+
+```python
+import OpenSeries.bilangan_istimewa as bilangan
+
+contoh_angka = 25
+print(f"{contoh_angka} adalah {bilangan.angka_automorphic(contoh_angka)}")
+
+```
+
+## Coba Sekarang
+
+<Codeblock code={`import OpenSeries.matematika as matematika
+
+print(
+"distribusi binomial dengan keberhasilan 3, percobaan 5, dan probabilitas 0.7 (70%)"
+)
+print(f"hasilnya adalah {matematika.distribusi_binomial(3, 5, 0.7)}")
+
+`} playseriesLink='https://playseries.vercel.app/bkqgvjmp86h2i2atjtw4nxjj' />

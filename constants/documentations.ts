@@ -62,10 +62,13 @@ export const documentations = [
                 href: "/docs/matematika/faktor-prima"
             },
             {
+                title: "Distribusi binomial",
+                href: "/docs/matematika/distribusi-binomial"
+            },
+            {
                 title: "Peluang Kejadian",
                 href: "/docs/matematika/peluang-kejadian"
             }
-            
         ]
     },
     {
@@ -119,6 +122,27 @@ export const documentations = [
             {
                 title: "Standar Deviasi",
                 href: "/docs/statistika/standar-deviasi"
+            }
+        ]
+    },
+    {
+        parent: "Bilangan Spesial",
+        childs: [
+            {
+                title: "Bilangan Armstrong",
+                href: "/docs/bilangan/bilangan-armstrong"
+            },
+            {
+                title: "Bilangan Automorphic",
+                href: "/docs/bilangan/bilangan-automorphic"
+            },
+            {
+                title: "Bilangan Pronic",
+                href: "/docs/bilangan/bilangan-pronic"
+            },
+            {
+                title: "Bilangan Segitiga",
+                href: "/docs/bilangan/bilangan-segitiga"
             }
         ]
     }
