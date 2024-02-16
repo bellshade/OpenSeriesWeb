@@ -5,7 +5,6 @@ import { featuredLinks } from "@/constants/featuredLinks";
 import { useSidebarStore } from "@/hooks/useSidebarStore";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
 
 type Props = {};
 
@@ -16,8 +15,14 @@ export default function Sidebar({}: Props) {
     return (
         <>
             <aside
-                className={`fixed inset-y-0 z-30 mt-16 flex min-w-[280px] max-w-[280px] flex-col gap-8 overflow-y-auto border-r bg-inherit p-8 dark:border-r-zinc-800 lg:translate-x-0 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
+                className={`fixed inset-y-0 z-50 flex min-w-[280px] max-w-[280px] flex-col gap-8 overflow-y-auto border-r bg-inherit p-8 dark:border-r-zinc-800 lg:translate-x-0 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
             >
+                <button
+                    onClick={() => toggleSidebar(false)}
+                    className="absolute block lg:hidden top-10 right-5 text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300"
+                >
+                    <span className="icon-[tabler--x] size-6"></span>
+                </button>
                 <div className="grid gap-2">
                     {featuredLinks.map((link) => (
                         <Link
