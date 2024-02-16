@@ -3,6 +3,7 @@
 import { navLinks } from "@/constants/navLinks";
 import { socialLinks } from "@/constants/socialLinks";
 import { useNavStyle } from "@/hooks/useNavStyle";
+import { useSidebarStore } from "@/hooks/useSidebarStore";
 import Link from "next/link";
 import { useState } from "react";
 import ThemeSwitcher from "./ThemeSwitcher";
@@ -12,6 +13,8 @@ type Props = {};
 const Navbar = (props: Props) => {
     const { isLanding } = useNavStyle();
     const [isOpen, setIsOpen] = useState(false);
+
+    const { isSidebarOpen, toggleSidebar } = useSidebarStore(); 
 
     const landingStyle = "fixed";
     const docsStyle = "sticky px-8";
@@ -65,8 +68,9 @@ const Navbar = (props: Props) => {
                 </div>
             </div>
             { !isLanding && (
-                <div className="flex lg:hidden border-t py-4 items-center gap-2 dark:border-zinc-700 overflow-y-hidden">
+                <div className="flex lg:hidden border-t py-1 items-center gap-2 dark:border-zinc-700 overflow-y-hidden">
                     <button
+                        onClick={() => toggleSidebar()}
                         className="grid h-10 w-10 place-items-center rounded-lg text-xl text-zinc-500 hover:bg-zinc-200 dark:text-zinc-400 dark:hover:bg-zinc-700 lg:hidden"
                     >
                         <span className="icon-[tabler--menu-2]"></span>

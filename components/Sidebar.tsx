@@ -2,6 +2,7 @@
 
 import { documentations } from "@/constants/documentations";
 import { featuredLinks } from "@/constants/featuredLinks";
+import { useSidebarStore } from "@/hooks/useSidebarStore";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -10,12 +11,12 @@ type Props = {};
 
 export default function Sidebar({}: Props) {
     const pathname = usePathname();
-    const [isOpen, setIsOpen] = useState(false);
+    const { isSidebarOpen, toggleSidebar } = useSidebarStore();
 
     return (
         <>
             <aside
-                className={`fixed inset-y-0 z-30 mt-16 flex min-w-[280px] max-w-[280px] flex-col gap-8 overflow-y-auto border-r bg-inherit p-8 dark:border-r-zinc-800 lg:translate-x-0 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+                className={`fixed inset-y-0 z-30 mt-16 flex min-w-[280px] max-w-[280px] flex-col gap-8 overflow-y-auto border-r bg-inherit p-8 dark:border-r-zinc-800 lg:translate-x-0 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
             >
                 <div className="grid gap-2">
                     {featuredLinks.map((link) => (
@@ -23,7 +24,7 @@ export default function Sidebar({}: Props) {
                             href={link.href}
                             key={link.name}
                             target={link.target}
-                            onClick={() => setIsOpen(false)}
+                            onClick={() => toggleSidebar(false)}
                             className="group flex items-center gap-2 font-medium text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300"
                         >
                             <div
@@ -47,7 +48,7 @@ export default function Sidebar({}: Props) {
                                         key={link.href}
                                         className={`border-l-2 py-2 pl-6 text-sm font-medium hover:border-l-indigo-600 hover:text-indigo-600 dark:hover:border-l-indigo-500 dark:hover:text-indigo-500 ${link.href === pathname ? "border-l-indigo-600 text-indigo-600 dark:border-l-indigo-500 dark:text-indigo-500" : "text-zinc-400 dark:border-l-zinc-700"}`}
                                         href={link.href}
-                                        onClick={() => setIsOpen(false)}
+                                        onClick={() => toggleSidebar(false)}
                                     >
                                         {link.title}
                                     </Link>
@@ -57,17 +58,6 @@ export default function Sidebar({}: Props) {
                     ))}
                 </div>
             </aside>
-            <button
-                onClick={() => setIsOpen(!isOpen)}
-                className={`fixed bottom-5 right-5 z-30 flex items-center gap-1 rounded-full bg-zinc-700 px-3 py-3 text-white sm:px-6 lg:hidden`}
-            >
-                {isOpen ? (
-                    <span className="icon-[ph--x] text-2xl"></span>
-                ) : (
-                    <span className="icon-[ic--round-menu] text-2xl"></span>
-                )}
-                <span className="hidden text-lg sm:block">{isOpen ? "Close" : "Open"} Sidebar</span>
-            </button>
         </>
     );
 }
