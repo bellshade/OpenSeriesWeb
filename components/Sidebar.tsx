@@ -19,7 +19,7 @@ export default function Sidebar({}: Props) {
             >
                 <button
                     onClick={() => toggleSidebar(false)}
-                    className="absolute block lg:hidden top-10 right-5 text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300"
+                    className="absolute right-5 top-10 block text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300 lg:hidden"
                 >
                     <span className="icon-[tabler--x] size-6"></span>
                 </button>

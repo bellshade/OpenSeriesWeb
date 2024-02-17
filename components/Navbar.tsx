@@ -15,7 +15,7 @@ const Navbar = (props: Props) => {
     const { isLanding } = useNavStyle();
     const [isOpen, setIsOpen] = useState(false);
 
-    const { isSidebarOpen, toggleSidebar } = useSidebarStore(); 
+    const { isSidebarOpen, toggleSidebar } = useSidebarStore();
 
     const landingStyle = "fixed";
     const docsStyle = "sticky px-8";
@@ -24,7 +24,7 @@ const Navbar = (props: Props) => {
         <nav
             className={`${isLanding ? landingStyle : docsStyle} inset-x-0 top-0 z-40 border-b bg-white/30 backdrop-blur-lg dark:border-zinc-700 dark:bg-zinc-800/30`}
         >
-            <div className={`relative flex items-center py-4 justify-between ${isLanding && "container"}`}>
+            <div className={`relative flex items-center justify-between py-4 ${isLanding && "container"}`}>
                 <Link
                     className="bg-gradient-to-br from-indigo-600 to-rose-400 bg-clip-text font-bold text-transparent"
                     href="/"
@@ -68,8 +68,8 @@ const Navbar = (props: Props) => {
                     </div>
                 </div>
             </div>
-            { !isLanding && (
-                <div className="flex lg:hidden border-t py-1 items-center gap-3 dark:border-zinc-700 overflow-y-hidden">
+            {!isLanding && (
+                <div className="flex items-center gap-3 overflow-y-hidden border-t py-1 dark:border-zinc-700 lg:hidden">
                     <button
                         onClick={() => toggleSidebar()}
                         className="grid h-10 w-10 place-items-center rounded-lg text-xl text-zinc-500 hover:bg-zinc-200 dark:text-zinc-400 dark:hover:bg-zinc-700 lg:hidden"
