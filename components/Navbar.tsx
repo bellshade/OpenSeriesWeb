@@ -6,6 +6,7 @@ import { useNavStyle } from "@/hooks/useNavStyle";
 import { useSidebarStore } from "@/hooks/useSidebarStore";
 import Link from "next/link";
 import { useState } from "react";
+import Breadcrumbs from "./Breadcrumbs";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 type Props = {};
@@ -32,7 +33,7 @@ const Navbar = (props: Props) => {
                 </Link>
                 <div className="flex items-center gap-8">
                     <div
-                        className={`absolute z-50 inset-x-0 top-full mt-3 flex origin-top flex-col gap-x-8 gap-y-6 rounded-lg border bg-white p-12 shadow-2xl dark:border-zinc-700 lg:dark:bg-transparent dark:bg-zinc-800 lg:static lg:m-0 lg:flex-row lg:border-none lg:bg-inherit lg:p-0 lg:shadow-none ${isOpen ? "scale-y-100" : "scale-y-0 lg:scale-y-100"}`}
+                        className={`absolute inset-x-0 top-full z-50 mt-3 flex origin-top flex-col gap-x-8 gap-y-6 rounded-lg border bg-white p-12 shadow-2xl dark:border-zinc-700 dark:bg-zinc-800 lg:static lg:m-0 lg:flex-row lg:border-none lg:bg-inherit lg:p-0 lg:shadow-none lg:dark:bg-transparent ${isOpen ? "scale-y-100" : "scale-y-0 lg:scale-y-100"}`}
                     >
                         {navLinks.map((link) => (
                             <Link
@@ -68,7 +69,7 @@ const Navbar = (props: Props) => {
                 </div>
             </div>
             { !isLanding && (
-                <div className="flex lg:hidden border-t py-1 items-center gap-2 dark:border-zinc-700 overflow-y-hidden">
+                <div className="flex lg:hidden border-t py-1 items-center gap-3 dark:border-zinc-700 overflow-y-hidden">
                     <button
                         onClick={() => toggleSidebar()}
                         className="grid h-10 w-10 place-items-center rounded-lg text-xl text-zinc-500 hover:bg-zinc-200 dark:text-zinc-400 dark:hover:bg-zinc-700 lg:hidden"
@@ -76,11 +77,7 @@ const Navbar = (props: Props) => {
                         <span className="icon-[tabler--menu-2]"></span>
                     </button>
 
-                    <div className="flex items-center gap-2 text-sm">
-                        <p>Matematika</p>
-                        <span className="icon-[tabler--chevron-right] text-zinc-500 dark:text-zinc-400"></span>
-                        <p className="font-semibold text-indigo-600 dark:text-indigo-500">Luas Lingkaran</p>
-                    </div>
+                    <Breadcrumbs />
                 </div>
             )}
         </nav>
