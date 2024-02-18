@@ -77,6 +77,7 @@
 
         50% {
             stroke-dashoffset: 0;
+
             @apply fill-zinc-800 dark:fill-white;
         }
     }
