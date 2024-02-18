@@ -1,11 +1,8 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import React from "react";
 
-type Props = {};
-
-const Community = (props: Props) => {
+const Community = () => {
     const { theme } = useTheme();
 
     return (

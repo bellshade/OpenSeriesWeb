@@ -4,9 +4,7 @@ import { coreTeam } from "@/constants/core-team";
 
 import Contributor from "./contributor";
 
-type Props = {};
-
-const Contributors = async (props: Props) => {
+const Contributors = async () => {
     return (
         <>
             <h3>OpenSeries Team</h3>

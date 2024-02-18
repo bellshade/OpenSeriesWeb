@@ -1,10 +1,10 @@
 "use client";
 
 import { ThemeProvider as Theme } from "next-themes";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 type Props = {
-    children: React.ReactNode;
+    children: ReactNode;
 };
 
 const ThemeProvider = ({ children }: Props) => {

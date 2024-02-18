@@ -1,11 +1,8 @@
 import Link from "next/link";
-import React from "react";
 
 import { contributing } from "@/constants/contributing";
 
-type Props = {};
-
-const Contribute = (props: Props) => {
+const Contribute = () => {
     return (
         <div className="not-prose grid gap-4 md:grid-cols-2">
             {contributing.map((repo) => (

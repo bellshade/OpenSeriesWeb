@@ -8,9 +8,7 @@ import { featuredLinks } from "@/constants/featured-links";
 
 import { useSidebarStore } from "@/stores/use-sidebar-store";
 
-type Props = {};
-
-export default function Sidebar({}: Props) {
+export default function Sidebar() {
     const pathname = usePathname();
     const { isSidebarOpen, toggleSidebar } = useSidebarStore();
 

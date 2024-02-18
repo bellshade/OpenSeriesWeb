@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { SVGProps, useEffect } from "react";
 
-const LandingSvg = (props: React.SVGProps<SVGSVGElement>) => {
+const LandingSvg = (props: SVGProps<SVGSVGElement>) => {
     useEffect(() => {
         const paths = document.querySelectorAll<SVGPathElement>("#landing-svg path");
 

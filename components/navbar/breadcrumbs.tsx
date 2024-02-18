@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import React from "react";
+import { Fragment } from "react";
 
 const Breadcrumbs = () => {
     const paths = usePathname();
@@ -16,7 +16,7 @@ const Breadcrumbs = () => {
                 const label = link.replace(/-/g, " ");
 
                 return (
-                    <React.Fragment key={index}>
+                    <Fragment key={index}>
                         <li
                             className={`capitalize ${href === paths ? "truncate text-indigo-600 dark:text-indigo-500" : "text-zinc-500 dark:text-zinc-400"}`}
                         >
@@ -25,7 +25,7 @@ const Breadcrumbs = () => {
                         {pathNames.length !== index + 1 && (
                             <span className="icon-[tabler--chevron-right] h-5 w-4 text-zinc-500 dark:text-zinc-400"></span>
                         )}
-                    </React.Fragment>
+                    </Fragment>
                 );
             })}
         </ol>
