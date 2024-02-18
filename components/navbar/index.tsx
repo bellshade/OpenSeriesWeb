@@ -13,9 +13,7 @@ import ThemeSwitcher from "@/components/theme-switcher";
 
 import Breadcrumbs from "./breadcrumbs";
 
-type Props = {};
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
     const { isLanding } = useNavStyleStore();
     const [isOpen, setIsOpen] = useState(false);
 
