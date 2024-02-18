@@ -1,6 +1,8 @@
 import Link from "next/link";
-import Contributor from "./contributor";
+
 import { coreTeam } from "@/constants/core-team";
+
+import Contributor from "./contributor";
 
 type Props = {};
 

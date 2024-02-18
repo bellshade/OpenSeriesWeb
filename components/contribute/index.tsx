@@ -1,6 +1,7 @@
-import { contributing } from "@/constants/contributing";
 import Link from "next/link";
 import React from "react";
+
+import { contributing } from "@/constants/contributing";
 
 type Props = {};
 

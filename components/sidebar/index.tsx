@@ -1,10 +1,12 @@
 "use client";
 
-import { documentations } from "@/constants/documentations";
-import { featuredLinks } from "@/constants/featured-links";
-import { useSidebarStore } from "@/stores/use-sidebar-store";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
+import { documentations } from "@/constants/documentations";
+import { featuredLinks } from "@/constants/featured-links";
+
+import { useSidebarStore } from "@/stores/use-sidebar-store";
 
 type Props = {};
 
