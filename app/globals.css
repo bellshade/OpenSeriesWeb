@@ -64,19 +64,20 @@
 
 @layer components {
     #landing-svg path {
-        stroke-dashoffset: 3000;
-        stroke-dasharray: 3000;
+        stroke-dashoffset: var(--stroke-dashoffset);
+        stroke-dasharray: var(--stroke-dasharray);
     }
 
     @keyframes landing-svg-anim {
         0%,
         100% {
-            opacity: 0;
+            fill: transparent;
+            stroke-dashoffset: var(--stroke-dashoffset);
         }
 
         50% {
             stroke-dashoffset: 0;
-            opacity: 100;
+            @apply fill-zinc-800 dark:fill-white;
         }
     }
 }
