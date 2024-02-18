@@ -1,16 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Octokit } from "octokit";
+
+import { octokit } from "@/constants/octokit";
 
 type Props = {
     username: string;
 };
 
 const Contributor = async ({ username }: Props) => {
-    const octokit = new Octokit({
-        auth: process.env.GITHUB_TOKEN
-    });
-
     const { data } = await octokit.request("GET /users/{username}", {
         username,
         headers: {
