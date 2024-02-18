@@ -1,8 +1,8 @@
+import { MDXRemote } from "next-mdx-remote/rsc";
+
 import { octokit } from "@/constants/octokit";
 
-import NavbarContent from "./navbar-content";
-
-const Navbar = async () => {
+const Page = async () => {
     const { data } = await octokit.request("GET /repos/{owner}/{repo}/releases/latest", {
         owner: "bellshade",
         repo: "OpenSeries",
@@ -11,7 +11,7 @@ const Navbar = async () => {
         }
     });
 
-    return <NavbarContent version={data.tag_name} />;
+    return <MDXRemote source={data.body!} />;
 };
 
-export default Navbar;
+export default Page;
