@@ -1,24 +1,16 @@
-export const navLinks = [
+type NavLink = {
+    name: string;
+    href: string;
+    target?: string;
+};
+
+export const navLinks: NavLink[] = [
     {
-        name: "Docs",
+        name: "Dokumentasi",
         href: "/docs"
-    },
-    {
-        name: "Kontribusi",
-        href: "/docs/contribute"
     },
     {
         name: "Komunitas",
         href: "/docs/community"
-    },
-    {
-        name: "Request Fitur",
-        href: "https://github.com/bellshade/OpenSeries/issues",
-        target: "_blank"
-    },
-    {
-        name: "Playseries",
-        href: "https://playseries.vercel.app",
-        target: "_blank"
     }
 ];
