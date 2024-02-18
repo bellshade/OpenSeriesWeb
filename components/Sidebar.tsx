@@ -15,7 +15,7 @@ export default function Sidebar({}: Props) {
     return (
         <>
             <aside
-                className={`fixed inset-y-0 z-50 flex min-w-[280px] max-w-[280px] flex-col gap-8 overflow-y-auto border-r bg-inherit p-8 dark:border-r-zinc-800 lg:translate-x-0 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
+                className={`fixed inset-y-0 z-50 flex min-w-[300px] max-w-[300px] flex-col gap-8 overflow-y-auto border-r bg-inherit p-8 dark:border-r-zinc-700 lg:z-30 lg:mt-16 lg:translate-x-0 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
             >
                 <button
                     onClick={() => toggleSidebar(false)}
@@ -63,6 +63,10 @@ export default function Sidebar({}: Props) {
                     ))}
                 </div>
             </aside>
+            <div
+                className={`pointer-events-none fixed inset-0 z-40 bg-white/50 backdrop-blur dark:bg-zinc-900/50 lg:opacity-0 ${isSidebarOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
+                onClick={() => toggleSidebar(false)}
+            ></div>
         </>
     );
 }
