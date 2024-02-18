@@ -1,18 +1,18 @@
 "use client";
 
-import { navLinks } from "@/constants/navLinks";
-import { socialLinks } from "@/constants/socialLinks";
-import { useNavStyle } from "@/hooks/useNavStyle";
-import { useSidebarStore } from "@/hooks/useSidebarStore";
 import Link from "next/link";
 import { useState } from "react";
-import Breadcrumbs from "./Breadcrumbs";
-import ThemeSwitcher from "./ThemeSwitcher";
+import ThemeSwitcher from "@/components/theme-switcher";
+import Breadcrumbs from "./breadcrumbs";
+import { navLinks } from "@/constants/nav-links";
+import { socialLinks } from "@/constants/social-links";
+import { useNavStyleStore } from "@/stores/use-nav-style-store";
+import { useSidebarStore } from "@/stores/use-sidebar-store";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
-    const { isLanding } = useNavStyle();
+    const { isLanding } = useNavStyleStore();
     const [isOpen, setIsOpen] = useState(false);
 
     const { toggleSidebar } = useSidebarStore();

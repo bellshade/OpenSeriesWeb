@@ -1,7 +1,6 @@
-import { coreTeam } from "@/constants/coreTeam";
-import Contributor from "./Contributor";
-import { Octokit } from "octokit";
 import Link from "next/link";
+import Contributor from "./contributor";
+import { coreTeam } from "@/constants/core-team";
 
 type Props = {};
 
