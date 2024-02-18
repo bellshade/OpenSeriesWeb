@@ -57,7 +57,7 @@ Project ini menggunakan [Next.js](https://nextjs.org/) sebagai framework untuk m
     git add .
     ```
 
-9. Setelah selesai, buatlah pesan commit yang sesuai dengan [format yang sudah di tentukan](#pesan-commit).
+9. Setelah selesai, buatlah pesan commit yang sesuai dengan [format yang sudah di tentukan](#format-pesan-commit).
 
 10. Push commit anda kedalam branch yang Anda buat sebelumnya:
     ```bash
@@ -68,7 +68,7 @@ Project ini menggunakan [Next.js](https://nextjs.org/) sebagai framework untuk m
 
 ## Format Pesan Commit
 
-Kami sangat menghargai penggunaan format commit yang konsisten untuk memudahkan pemantauan dan pemeliharaan proyek. Mohon gunakan format berikut sesuai dengan [Conventional Commits](https://www.conventionalcommits.org/id/v1.0.0/):
+Kami sangat menghargai penggunaan format commit yang konsisten untuk memudahkan pemantauan dan pemeliharaan project. Mohon gunakan format berikut sesuai dengan [Conventional Commits](https://www.conventionalcommits.org/id/v1.0.0/):
 
 - `feat:` untuk menandai penambahan fitur baru.
 - `fix:` untuk menandai perbaikan bug.
