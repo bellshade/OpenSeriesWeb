@@ -1,9 +1,11 @@
 "use client";
 
-import Sidebar from "@/components/sidebar";
-import { useNavStyleStore } from "@/stores/use-nav-style-store";
 import { useEffect } from "react";
 import { PythonProvider } from "react-py";
+
+import { useNavStyleStore } from "@/stores/use-nav-style-store";
+
+import Sidebar from "@/components/sidebar";
 
 export default function MdxLayout({ children }: { children: React.ReactNode }) {
     const { setDocsStyle } = useNavStyleStore();

@@ -2,12 +2,16 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import ThemeSwitcher from "@/components/theme-switcher";
-import Breadcrumbs from "./breadcrumbs";
+
 import { navLinks } from "@/constants/nav-links";
 import { socialLinks } from "@/constants/social-links";
+
 import { useNavStyleStore } from "@/stores/use-nav-style-store";
 import { useSidebarStore } from "@/stores/use-sidebar-store";
+
+import ThemeSwitcher from "@/components/theme-switcher";
+
+import Breadcrumbs from "./breadcrumbs";
 
 type Props = {};
 

@@ -1,8 +1,10 @@
 "use client";
 
-import LandingSvg from "@/components/landing-svg";
-import { projectByLinks } from "@/constants/project-by-links";
 import Link from "next/link";
+
+import { projectByLinks } from "@/constants/project-by-links";
+
+import LandingSvg from "@/components/landing-svg";
 
 export default function Home() {
     return (

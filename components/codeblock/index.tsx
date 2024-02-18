@@ -1,13 +1,13 @@
 "use client";
 
+import { python } from "@codemirror/lang-python";
+import { vscodeDark } from "@uiw/codemirror-theme-vscode";
+import ReactCodeMirror from "@uiw/react-codemirror";
+import { useTheme } from "next-themes";
+import Link from "next/link";
 import { useCallback, useState } from "react";
 import { usePython } from "react-py";
-import { python } from "@codemirror/lang-python";
-import ReactCodeMirror from "@uiw/react-codemirror";
-import { vscodeDark } from "@uiw/codemirror-theme-vscode";
-import { useTheme } from "next-themes";
 import { tomorrow } from "thememirror";
-import Link from "next/link";
 
 type Props = {
     code: string;
