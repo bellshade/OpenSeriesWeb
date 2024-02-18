@@ -20,65 +20,61 @@
         @apply text-zinc-500 dark:text-zinc-400;
     }
 
-    pre[data-theme*=" "] {
-        @apply bg-[var(--shiki-light-bg)];
-    }
-
-    code[data-theme*=" "],
-    code[data-theme*=" "] span {
-        @apply bg-[var(--shiki-light-bg)] text-[var(--shiki-light)];
-    }
-
-    html.dark code[data-theme*=" "],
-    html.dark code[data-theme*=" "] span {
-        color: var(--shiki-dark);
-        background-color: var(--shiki-dark-bg);
-    }
-
-    html.dark pre[data-theme*=" "] {
-        background-color: var(--shiki-dark-bg);
-    }
-
     [data-line-numbers] {
-        counter-reset: line;
+        @apply [counter-reset:line];
     }
 
     [data-line-numbers] > [data-line]::before {
-        counter-increment: line;
-        content: counter(line);
-        display: inline-block;
-        width: 1rem;
-        margin-right: 1rem;
-        text-align: right;
-        color: zinc;
+        @apply mr-4 inline-block w-4 text-right text-[zinc] [content:counter(line)] [counter-increment:line];
     }
 
-    code[data-line-numbers-max-digits="2"] > [data-line]::before {
-        width: 2rem;
+    code[data-line-numbers-max-digits="2"] {
+        @apply [&>[data-line]]:before:w-8;
     }
 
     code[data-line-numbers-max-digits="3"] > [data-line]::before {
-        width: 3rem;
+        @apply [&>[data-line]]:before:w-12;
+    }
+
+    #landing-svg path {
+        @apply [stroke-dasharray:var(--stroke-dasharray)] [stroke-dashoffset:var(--stroke-dashoffset)];
     }
 }
 
-@layer components {
-    #landing-svg path {
-        stroke-dashoffset: var(--stroke-dashoffset);
-        stroke-dasharray: var(--stroke-dasharray);
+@define-mixin syntax-highight $theme {
+    html.$(theme) pre[data-theme*=" "] {
+        background-color: var(--shiki-$(theme)-bg);
     }
 
-    @keyframes landing-svg-anim {
+    html.$(theme) code[data-theme*=" "],
+    html.$(theme) code[data-theme*=" "] span {
+        color: var(--shiki-$(theme));
+        background-color: var(--shiki-$(theme)-bg);
+    }
+}
+
+@define-mixin svg-anim $theme {
+    @keyframes landing-svg-anim-$(theme) {
         0%,
         100% {
-            fill: transparent;
-            stroke-dashoffset: var(--stroke-dashoffset);
+            @apply fill-transparent [stroke-dashoffset:var(--stroke-dashoffset)];
         }
 
         50% {
-            stroke-dashoffset: 0;
+            @apply [stroke-dashoffset:0];
 
-            @apply fill-zinc-800 dark:fill-white;
+            @mixin-content;
         }
     }
 }
+
+@mixin svg-anim light {
+    fill: theme("colors.zinc.800");
+}
+
+@mixin svg-anim dark {
+    fill: theme("colors.white");
+}
+
+@mixin syntax-highight light;
+@mixin syntax-highight dark;
