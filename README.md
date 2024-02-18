@@ -1,84 +1,50 @@
-# Website OpenSeries
+<h1 align="center">Website OpenSeries</h1>
 
-Selamat datang di repositori OpenSeries! Repositori ini berisi kode sumber untuk website OpenSeries. Kami menggunakan runtime dan package manager dari Bun, jadi jika Anda ingin berkontribusi, pastikan untuk menginstal Bun terlebih dahulu dengan mengacu pada dokumentasi resmi di [website bun](https://bun.sh/).
+![Banner](.github/banner.png)
 
-## Memulai
+<p align="center">Selamat datang di repositori OpenSeriesWeb! Repositori ini berisi kode sumber untuk website OpenSeries.</p>
 
-Untuk berkontribusi pada website OpenSeries, ikuti langkah-langkah berikut:
+<p align="center">
+  <a href="https://www.openseries.blue/">Website</a> - <a href="#depedensi">Depedensi</a> - <a href="#instalasi">Instalasi</a> - <a href="#kontribusi">Kontribusi</a> - <a href="#lisensi">Lisensi</a>
+</p>
 
-1. Fork repositori ini di GitHub.
+## Depedensi
+- [Bun](https://bun.sh/): Package manager dan JavaScript runtime environment yang digunakan untuk mengelola dependensi project.
+- [Next.js](https://nextjs.org/): Framework React yang digunakan untuk membangun website OpenSeries.
+- [Prettier](https://prettier.io/): Alat yang digunakan untuk memformat kode secara otomatis sesuai dengan aturan yang telah ditentukan.
+- [ESLint](https://eslint.org/): Alat linting JavaScript yang digunakan untuk menganalisis kode JavaScript dan menemukan masalah potensial.
+- [TailwindCSS](https://tailwindcss.com/): Framework CSS yang digunakan untuk mengatur tampilan website.
 
-2. Clone repositori yang telah di-fork ke mesin lokal Anda:
+## Instalasi
+Tata cara untuk menjalankan website OpenSeries secara lokal:
+1. Pastikan bahwa **Bun** telah ter-install di perangkat Anda. Lihat dokumentasi resmi Bun untuk [tata cara instalasinya](https://bun.sh/docs/installation)
 
-    ```bash
-    git clone https://github.com/nama-anda/OpenSeries.git
-    ```
+2. Clone repositori ini ke perangkat lokal Anda:
+	```bash
+	git clone https://github.com/bellshade/OpenSeriesWeb.git
+	```
 
-3. Pindah ke direktori proyek:
+3. Masuk ke direktori project:
+	```bash
+	cd OpenSeriesWeb
+	```
 
-    ```bash
-    cd OpenSeries
-    ```
+4. Install depedensi project yang diperlukan:
+	```bash
+	bun install
+	```
 
-4. Pastikan branch Anda diatur ke `develop`:
+5. Jalankan project secara lokal:
+	```bash
+	bun dev
+	```
 
-    ```bash
-    git checkout develop
-    ```
+Anda dapat mengakses website OpenSeries yang berjalan secara lokal melalui URL http://localhost:3000
 
-5. Buat branch baru untuk fitur atau perbaikan bug:
+## Kontribusi
+Jika Anda tertarik untuk berkontribusi pada project ini, Silahkan membaca [CONTRIBUTING.md](https://github.com/bellshade/OpenSeriesWeb/blob/main/CONTRIBUTING.md) untuk panduan dan langkah-langkah yang harus diikuti sebelum berkontribusi.
 
-    ```bash
-    git checkout -b nama-fitur
-    ```
-
-## Alur Pengembangan
-
-1. Instal paket yang diperlukan menggunakan Bun:
-
-    ```bash
-    bun install
-    ```
-
-2. Jalankan proyek menggunakan Bun:
-
-    ```bash
-    bun dev
-    ```
-
-3. Sebelum melakukan commit, jalankan linter Bun untuk memastikan kualitas kode:
-
-    ```bash
-    bun lint
-    ```
-
-4. Format kode menggunakan Bun Prettier:
-
-    ```bash
-    bun format
-    ```
-
-5. Lakukan commit perubahan Anda dengan menggunakan salah satu awalan pesan commit berikut:
-
-    - `feat:` untuk fitur baru
-    - `fix:` untuk perbaikan bug
-    - `docs:` untuk perubahan dokumentasi
-    - `add:` untuk menambahkan file atau aset
-
-    Contoh commit:
-
-    ```bash
-    git commit -m "feat: menambahkan fitur baru"
-    ```
-
-## Pull Request
-
-Setelah membuat perubahan, dorong branch ke fork Anda di GitHub dan buat pull request yang dituju ke branch develop repositori ini.
-
-## Kontributor
-
-Terima kasih kepada semua kontributor yang telah membantu meningkatkan website OpenSeries! Jika Anda tertarik berkontribusi, silakan fork repositori ini dan kirim pull request ke branch develop.
 
 ## Lisensi
+Project ini dilisensikan di bawah [Lisensi MIT](https://github.com/bellshade/OpenSeriesWeb/blob/main/LICENSE). Lihat `LICENSE` untuk informasi lebih lanjut.
 
-Proyek ini dilisensikan di bawah Lisensi MIT.
