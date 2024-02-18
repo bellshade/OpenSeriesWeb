@@ -7,7 +7,8 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "postbuild": "next-sitemap"
     },
     "dependencies": {
         "@codemirror/lang-python": "^6.1.4",
@@ -20,6 +21,7 @@
         "fast-glob": "^3.3.2",
         "next": "14.0.4",
         "next-mdx-remote": "^4.4.1",
+        "next-sitemap": "^4.2.3",
         "next-themes": "^0.2.1",
         "nextjs-toploader": "^1.6.4",
         "octokit": "^3.1.2",
