@@ -3,12 +3,17 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { documentations } from "@/constants/documentations";
 import { featuredLinks } from "@/constants/featured-links";
 
 import { useSidebarStore } from "@/stores/use-sidebar-store";
 
-export default function Sidebar() {
+import { DocumentGroup } from "@/utils/get-docs";
+
+type Props = {
+    sidebarLinks: DocumentGroup;
+};
+
+const Sidebar = ({ sidebarLinks }: Props) => {
     const pathname = usePathname();
     const { isSidebarOpen, toggleSidebar } = useSidebarStore();
 
@@ -42,20 +47,20 @@ export default function Sidebar() {
                     ))}
                 </div>
                 <div className="space-y-4">
-                    {documentations.map((documentation) => (
-                        <div key={documentation.parent} className="space-y-4">
+                    {Object.keys(sidebarLinks).map((category) => (
+                        <div key={category} className="space-y-4">
                             <span className="text-xs font-bold uppercase text-zinc-800 dark:text-zinc-200">
-                                {documentation.parent}
+                                {category}
                             </span>
                             <div className="flex flex-col">
-                                {documentation.childs.map((link) => (
+                                {sidebarLinks[category].map((item) => (
                                     <Link
-                                        key={link.href}
-                                        className={`border-l-2 py-2 pl-6 text-sm font-medium hover:border-l-indigo-600 hover:text-indigo-600 dark:hover:border-l-indigo-500 dark:hover:text-indigo-500 ${link.href === pathname ? "border-l-indigo-600 text-indigo-600 dark:border-l-indigo-500 dark:text-indigo-500" : "text-zinc-400 dark:border-l-zinc-700"}`}
-                                        href={link.href}
+                                        key={item.link}
+                                        className={`border-l-2 py-2 pl-6 text-sm font-medium capitalize hover:border-l-indigo-600 hover:text-indigo-600 dark:hover:border-l-indigo-500 dark:hover:text-indigo-500 ${item.link === pathname ? "border-l-indigo-600 text-indigo-600 dark:border-l-indigo-500 dark:text-indigo-500" : "text-zinc-400 dark:border-l-zinc-700"}`}
+                                        href={item.link}
                                         onClick={() => toggleSidebar()}
                                     >
-                                        {link.title}
+                                        {item.title}
                                     </Link>
                                 ))}
                             </div>
@@ -69,4 +74,6 @@ export default function Sidebar() {
             ></div>
         </>
     );
-}
+};
+
+export default Sidebar;
