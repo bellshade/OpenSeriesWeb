@@ -1,74 +1,94 @@
 # Panduan Kontribusi
 
-Terima kasih telah berkontribusi pada repository OpenSeriesWeb! Kami sangat menghargai setiap kontribusi yang diberikan untuk meningkatkan proyek ini. Harap ikuti panduan berikut untuk memulai kontribusi Anda.
+Terima kasih atas minat Anda untuk berkontribusi pada repository OpenSeriesWeb! Kami sangat mengapresiasi dan menghargai segala bentuk kontribusi yang membantu meningkatkan project ini. Mohon ikuti panduan berikut untuk memulai kontribusi Anda.
 
-**Perhatian**: Ini adalah repository untuk website OpenSeries. Jika Anda ingin berkontribusi pada library OpenSeries, silakan kunjungi [OpenSeries Repository](https://github.com/bellshade/OpenSeries/).
+> [!NOTE]
+> Ini adalah repository untuk **Website OpenSeries.** Jika Anda ingin berkontribusi pada **Library OpenSeries**, silakan kunjungi [Repositori OpenSeries](https://github.com/bellshade/OpenSeries/).
 
-Proyek ini menggunakan Next.js sebagai framework, serta Bun sebagai package manager dan runtime. Pastikan Anda telah menginstal Bun sebelum memulai.
+Project ini menggunakan [Next.js](https://nextjs.org/) sebagai framework untuk membangun website OpenSeries, serta [Bun](https://bun.sh/) sebagai package manager dan JavaScript runtime environment.
+
+## Daftar isi
+- [Ketentuan Kontribusi](#ketentuan-kontribusi)
+- [Langkah-Langkah Kontribusi](#langkah-langkah-kontribusi)
+- [Format Pesan Commit](#format-pesan-commit)
+- [Proses Review dan Merge](#proses-review-dan-merge)
 
 ## Ketentuan Kontribusi
 
-- Hasil pekerjaan Anda harus merupakan buatan sendiri dan bebas dari hak cipta orang lain. Kesamaan dengan karya orang lain tidak akan kami merge.
-- Setiap pull request yang di-merge akan dilisensikan di bawah lisensi MIT.
+- Setiap kontribusi harus merupakan karya sendiri dan tidak melanggar hak cipta orang lain. kontribusi yang menyalin karya orang lain tidak akan kami merge.
+- Setiap pull request yang di-merge akan dilisensikan di bawah [Lisensi MIT](https://github.com/bellshade/OpenSeriesWeb/blob/main/LICENSE).
 - Pekerjaan Anda harus mengikuti standar dan gaya penulisan kode yang telah ditetapkan.
 
 ## Langkah-Langkah Kontribusi
 
 1. Fork repository ini.
-2. Clone repository yang sudah di-fork ke lokal Anda:
 
+2. Clone repository yang sudah di-fork ke perangkat lokal Anda:
     ```bash
     git clone https://github.com/username/OpenSeriesWeb.git
     ```
 
-    Ganti `username` degan username Anda.
-3. Masuk ke folder hasil clone, lalu pindahkan branch ke branch `develop`:
+    Ubah `username` degan username Github Anda.
 
+3. Masuk ke direktori project, lalu pindah ke branch `develop`:
     ```bash
     git checkout develop
     ```
 
 4. Setup pre-commit
-    - Install sesuai panduan resmi di [website pre-commit](https://pre-commit.com/#install)
+    - Ikuti panduan resmi mengenai instalasi di [website pre-commit](https://pre-commit.com/#install)
     - Jalankan `pre-commit install`
-5. Buat branch baru sesuai fitur atau perbaikan yang akan Anda tambahkan:
 
+5. Buat branch baru sesuai perubahan atau perbaikan yang ingin Anda tambahkan:
     ```bash
     git checkout -b nama-branch
     ```
 
-6. Jalankan website menggunakan `bun dev`:
+6. Mulailah membuat perubahan atau perbaikan yang diinginkan.
 
+7. Jalankan project secara lokal untuk menguji perubahan Anda dengan perintah:
     ```bash
     bun dev
     ```
+    Anda dapat mengakses website OpenSeries yang berjalan secara lokal melalui URL http://localhost:3000
 
-7. Lakukan perbaikan atau penambahan pada website.
-8. Jika semua sudah sesuai, lakukan commit dan push perubahan Anda.
-9. Lakukan pull request ke branch `develop` di reposotory ini.
+8. Jika semua sudah sesuai, tambahkan perubahan yang telah Anda lakukan ke dalam staging area dengan perintah berikut:
+    ```bash
+    git add .
+    ```
 
-## Pesan Commit
+9. Setelah selesai, buatlah pesan commit yang sesuai dengan [format yang sudah di tentukan](#pesan-commit).
 
-Gunakan format berikut sesuai dengan [Conventional Commits](https://www.conventionalcommits.org/id/v1.0.0/):
+10. Push commit anda kedalam branch yang Anda buat sebelumnya:
+    ```bash
+    git push origin nama-branch
+    ```
 
-- `feat:` untuk penambahan fitur baru.
-- `fix:` untuk memperbaiki bug.
-- `docs:` untuk mengubah dokumentasi.
-- `add:` untuk menambahkan konten atau file baru.
+11. Buatlah Pull Request ke branch `develop` pada [repositori utama](https://github.com/bellshade/OpenSeriesWeb) melalui _interface_ Github.
+
+## Format Pesan Commit
+
+Kami sangat menghargai penggunaan format commit yang konsisten untuk memudahkan pemantauan dan pemeliharaan proyek. Mohon gunakan format berikut sesuai dengan [Conventional Commits](https://www.conventionalcommits.org/id/v1.0.0/):
+
+- `feat:` untuk menandai penambahan fitur baru.
+- `fix:` untuk menandai perbaikan bug.
+- `docs:` untuk menandai perubahan dalam dokumentasi.
+- `add:` untuk menandai penambahan konten atau file baru.
 
 Contoh:
-
 ```bash
-git commit -m "feat: Menambah fitur baru untuk ..."
+git commit -m "feat: Menambahkan fitur search pada halaman dokumentasi."
 ```
+
+Mohon pastikan pesan commit Anda jelas dan deskriptif untuk memudahkan proses review dan integrasi.
 
 ## Proses Review dan Merge
 
-Pull request Anda akan di-merge jika:
+Pull Request Anda akan di-merge jika:
 
-- Mengikuti standar dan arahan dari CONTRIBUTING.md.
-- Lolos uji dan pemeriksaan dari tes yang telah kami sediakan.
+- Mengikuti standar dan petunjuk dari CONTRIBUTING.md.
+- Lulus uji dan pemeriksaan dari tes yang telah kami sediakan.
 
-Jika ada pertanyaan atau masalah, jangan ragu untuk mengajukan issue atau menghubungi tim pengembangan.
+Jika Anda memiliki pertanyaan atau mengalami masalah, jangan ragu untuk membuka [issue](https://github.com/bellshade/OpenSeriesWeb/issues) atau menghubungi tim pengembangan.
 
 Terima kasih atas kontribusi Anda!
