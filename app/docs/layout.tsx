@@ -1,12 +1,12 @@
 "use client";
 
-import Sidebar from "@/components/Sidebar";
-import { useNavStyle } from "@/hooks/useNavStyle";
+import Sidebar from "@/components/sidebar";
+import { useNavStyleStore } from "@/stores/use-nav-style-store";
 import { useEffect } from "react";
 import { PythonProvider } from "react-py";
 
 export default function MdxLayout({ children }: { children: React.ReactNode }) {
-    const { setDocsStyle } = useNavStyle();
+    const { setDocsStyle } = useNavStyleStore();
     const packages = {
         micropip: ["OpenSeriesBellshade"]
     };

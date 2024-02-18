@@ -2,7 +2,7 @@ export const featuredLinks = [
     {
         name: "Kontribusi",
         icon: "icon-[solar--heart-shine-bold]",
-        href: "/docs/contribute"
+        href: "/docs/kontribusi"
     },
     {
         name: "Request Fitur",
@@ -13,7 +13,7 @@ export const featuredLinks = [
     {
         name: "Komunitas",
         icon: "icon-[solar--users-group-two-rounded-bold]",
-        href: "/docs/community"
+        href: "/docs/komunitas"
     },
     {
         name: "Playground",

@@ -6,7 +6,7 @@ interface NavStyleState {
     setLandingStyles: () => void;
 }
 
-export const useNavStyle = create<NavStyleState>((set) => ({
+export const useNavStyleStore = create<NavStyleState>((set) => ({
     isLanding: true,
     setDocsStyle: () => set({ isLanding: false }),
     setLandingStyles: () => set({ isLanding: true })

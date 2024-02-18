@@ -6,7 +6,7 @@ export const documentations = [
         childs: [
             {
                 title: "Tentang",
-                href: "/docs"
+                href: "/docs/get-started/tentang"
             },
             {
                 title: "Instalasi",
