@@ -11,6 +11,6 @@ export const navLinks: NavLink[] = [
     },
     {
         name: "Komunitas",
-        href: "/docs/community"
+        href: "/docs/komunitas"
     }
 ];
