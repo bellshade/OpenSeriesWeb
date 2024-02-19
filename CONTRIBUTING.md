@@ -22,7 +22,7 @@ Project ini menggunakan [Next.js](https://nextjs.org/) sebagai framework untuk m
 
 ## Langkah-Langkah Kontribusi
 
-1. Fork repository ini.
+1. Sebelum Anda mulai membuat perubahan, perbaikan, atau menambah fitur, silakan untuk **membuat [issue](https://github.com/bellshade/OpenSeriesWeb/issues/new)** terlebih dahulu. Hal ini akan membantu mencegah konflik dengan pull request lainnya. Anda dapat menjelaskan detail perubahan yang akan Anda lakukan dengan membuat deskripsi di [issue](https://github.com/bellshade/OpenSeriesWeb/issues/new). Setelah Anda menjelaskan perubahan Anda di [issue](https://github.com/bellshade/OpenSeriesWeb/issues/new), Anda dapat melakukan fork terhadap repositori kami.
 
 2. Clone repository yang sudah di-fork ke perangkat lokal Anda:
 
