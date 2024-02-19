@@ -53,7 +53,7 @@ jobs:
                   else
                     BUILD_STATUS="Gagal💔"
                     LABEL="invalid"
-                    SUCCESS_MESSAGE="Sepertinya ada kesalahan dalam kode yang menyebabkan kegagalan build. Coba jalankan `bun run build` di localmu. Silahkan perbaiki terlebih dahulu😼!"
+                    SUCCESS_MESSAGE="Sepertinya ada kesalahan dalam kode yang menyebabkan kegagalan build. Coba jalankan \`bun run build\` di localmu. Silahkan perbaiki terlebih dahulu😼!"
                     REMOVAL_LABEL="ready to review"
                   fi
                   COMMENT_BODY=$(cat <<EOF
