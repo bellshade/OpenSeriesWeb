@@ -45,7 +45,7 @@ jobs:
                   PR: ${{ github.event.pull_request.html_url }}
               run: |
                   LAST_COMMIT_SHA="${{ github.event.pull_request.head.sha }}"
-                  if [[ ${{ job.status.build }} == 'success' ]]; then
+                  if [ ${{ needs.build.result }} == 'success' ]; then
                     BUILD_STATUS="Berhasil🩵"
                     LABEL="ready to review"
                     SUCCESS_MESSAGE="Mohon untuk menunggu para Maintainer mereview kodemu🎉!"
