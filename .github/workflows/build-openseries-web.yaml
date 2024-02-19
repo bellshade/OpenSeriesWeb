@@ -1,4 +1,4 @@
-name: Pull Request Build
+name: Build OpenSeries Web
 
 on:
     pull_request:
@@ -11,8 +11,11 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v4
-            - uses: oven-sh/setup-bun@v1
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+
+            - name: Setup Bun
+              uses: oven-sh/setup-bun@v1
               with:
                   bun-version: latest
 
@@ -45,11 +48,11 @@ jobs:
                   else
                       BUILD_STATUS="Gagal💔"
                       LABEL="invalid"
-                      SUCCESS_MESSAGE="Sepertinya ada kesalahan dalam kode yang menyebabkan kegagalan build. Silahkan perbaiki terlebih dahulu😼!"
+                      SUCCESS_MESSAGE="Sepertinya ada kesalahan dalam kode yang menyebabkan kegagalan build. Coba jalankan `bun run build` di localmu. Silahkan perbaiki terlebih dahulu😼!"
                       REMOVAL_LABEL="ready to review"
                   fi
                   COMMENT_BODY=$(cat <<EOF
-                  ## Building Next.js
+                  ## Building Website OpenSeries😍
                   Build untuk pull request ini $BUILD_STATUS. $SUCCESS_MESSAGE
                   | Commit | Status    |
                   |-------------|-----------|
