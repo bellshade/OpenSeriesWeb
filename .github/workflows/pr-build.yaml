@@ -54,8 +54,7 @@ jobs:
                       | Commit | Status    |
                       |-------------|-----------|
                       | $LAST_COMMIT_SHA      | $BUILD_STATUS    |
-                      EOF
-                  )
+                  EOF)
                   gh pr edit $PR --add-label "$LABEL"
                   gh pr label $PR --remove "$REMOVAL_LABEL"
                   gh pr comment $PR --body "$COMMENT_BODY"
