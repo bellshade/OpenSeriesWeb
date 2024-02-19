@@ -1,0 +1,64 @@
+name: Build OpenSeries Web
+
+on:
+    pull_request:
+        branches:
+            - develop
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+
+            - name: Setup Bun
+              uses: oven-sh/setup-bun@v1
+              with:
+                  bun-version: latest
+
+            - name: Build Next.js
+              run: |
+                  bun install --frozen-lockfile
+                  bun lint
+                  bun run build
+
+            - name: Check Build Status
+              run: |
+                  if [ $? -eq 0 ]; then
+                    echo "Build successful"
+                  else
+                    echo "Build failed. Exiting..."
+                    exit 1
+                  fi
+
+            - name: Comment on Pull Request
+              env:
+                  GH_TOKEN: ${{ secrets.WF_TOKEN }}
+                  PR: ${{ github.event.pull_request.html_url }}
+              run: |
+                  LAST_COMMIT_SHA="${{ github.event.pull_request.head.sha }}"
+                  if [[ ${{ job.status }} == 'success' ]]; then
+                      BUILD_STATUS="Berhasil🩵"
+                      LABEL="ready to review"
+                      SUCCESS_MESSAGE="Mohon untuk menunggu para Maintainer mereview kodemu🎉!"
+                      REMOVAL_LABEL="invalid"
+                  else
+                      BUILD_STATUS="Gagal💔"
+                      LABEL="invalid"
+                      SUCCESS_MESSAGE="Sepertinya ada kesalahan dalam kode yang menyebabkan kegagalan build. Coba jalankan `bun run build` di localmu. Silahkan perbaiki terlebih dahulu😼!"
+                      REMOVAL_LABEL="ready to review"
+                  fi
+                  COMMENT_BODY=$(cat <<EOF
+                  ## Building Website OpenSeries😍
+                  Build untuk pull request ini $BUILD_STATUS. $SUCCESS_MESSAGE
+                  | Commit | Status    |
+                  |-------------|-----------|
+                  | $LAST_COMMIT_SHA      | $BUILD_STATUS    |
+                  EOF
+                  )
+                  gh pr edit $PR --add-label "$LABEL"
+                  gh pr edit $PR --remove-label "$REMOVAL_LABEL"
+                  gh pr comment $PR --body "$COMMENT_BODY"
