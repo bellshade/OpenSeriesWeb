@@ -67,15 +67,14 @@ const Codeblock = ({ code, playseriesLink }: Props) => {
                     </span>
                 </div>
                 <div className="grid divide-x divide-y dark:divide-zinc-700 sm:grid-cols-2">
-                    <div>
-                        <ReactCodeMirror
-                            value={value}
-                            theme={currentTheme === "dark" ? vscodeDark : tomorrow}
-                            height="400px"
-                            extensions={[python()]}
-                            onChange={onChange}
-                        />
-                    </div>
+                    <ReactCodeMirror
+                        className="overflow-x-auto"
+                        value={value}
+                        theme={currentTheme === "dark" ? vscodeDark : tomorrow}
+                        height="400px"
+                        extensions={[python()]}
+                        onChange={onChange}
+                    />
                     <div className="flex overflow-x-auto p-8">
                         <pre>
                             <code>
