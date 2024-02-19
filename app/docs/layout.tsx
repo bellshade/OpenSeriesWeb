@@ -1,26 +1,15 @@
-"use client";
+import { ReactNode } from "react";
 
-import Sidebar from "@/components/Sidebar";
-import { useNavStyle } from "@/hooks/useNavStyle";
-import { useEffect } from "react";
-import { PythonProvider } from "react-py";
+import { sidebarLinks } from "@/constants/sidebar-links";
 
-export default function MdxLayout({ children }: { children: React.ReactNode }) {
-    const { setDocsStyle } = useNavStyle();
-    const packages = {
-        micropip: ["OpenSeriesBellshade"]
-    };
+import DocsWrapper from "@/components/docs-wrapper";
+import Sidebar from "@/components/sidebar";
 
-    useEffect(() => {
-        setDocsStyle();
-    }, [setDocsStyle]);
-
+export default async function MdxLayout({ children }: { children: ReactNode }) {
     return (
-        <PythonProvider packages={packages}>
-            <Sidebar />
-            <main className="prose prose-indigo max-w-none overflow-y-auto rounded-xl p-8 dark:prose-invert prose-pre:border prose-img:w-full prose-img:rounded-xl dark:prose-h1:bg-clip-text dark:prose-h1:font-bold dark:prose-pre:border-zinc-700 lg:pl-80">
-                {children}
-            </main>
-        </PythonProvider>
+        <>
+            <Sidebar sidebarLinks={sidebarLinks} />
+            <DocsWrapper>{children}</DocsWrapper>
+        </>
     );
 }

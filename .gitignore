@@ -39,3 +39,6 @@ next-env.d.ts
 
 /OpenSeries
 /testing
+
+public/robots.txt
+public/sitemap*

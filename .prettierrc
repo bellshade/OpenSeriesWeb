@@ -1,5 +1,10 @@
 {
     "printWidth": 120,
     "trailingComma": "none",
-    "plugins": ["prettier-plugin-tailwindcss"]
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true,
+    "importOrderCaseInsensitive": true,
+    "importOrderParserPlugins": ["typescript", "jsx", "mdx"],
+    "importOrder": ["^@/constants/(.*)$", "^@/stores/(.*)$", "^@/utils/(.*)$", "^@/components/(.*)$", "^[./]"],
+    "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"]
 }

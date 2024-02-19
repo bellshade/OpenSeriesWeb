@@ -1,14 +1,15 @@
 "use client";
 
-import { useNavStyle } from "@/hooks/useNavStyle";
 import { ReactNode, useEffect } from "react";
+
+import { useNavStyleStore } from "@/stores/use-nav-style-store";
 
 type Props = {
     children: ReactNode;
 };
 
 const Layout = ({ children }: Props) => {
-    const { setLandingStyles } = useNavStyle();
+    const { setLandingStyles } = useNavStyleStore();
 
     useEffect(() => {
         setLandingStyles();
