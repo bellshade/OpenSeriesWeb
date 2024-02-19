@@ -2,7 +2,8 @@ import { useTheme } from "next-themes";
 import { SVGProps, useEffect } from "react";
 
 const LandingSvg = (props: SVGProps<SVGSVGElement>) => {
-    const { theme } = useTheme();
+    const { theme, systemTheme } = useTheme();
+    const currentTheme = theme === "system" ? systemTheme : theme;
 
     useEffect(() => {
         const paths = document.querySelectorAll<SVGPathElement>("#landing-svg path");
@@ -16,13 +17,13 @@ const LandingSvg = (props: SVGProps<SVGSVGElement>) => {
             const delay = Math.random() * 50000;
 
             setTimeout(() => {
-                path.style.animation = `landing-svg-anim-${theme} 5s ease-in-out infinite`;
+                path.style.animation = `landing-svg-anim-${currentTheme} 5s ease-in-out infinite`;
                 path.style.strokeDashoffset = length;
             }, delay);
         }
 
         paths.forEach((path) => animatePath(path));
-    }, [theme]);
+    }, [currentTheme]);
 
     return (
         <svg viewBox="0 0 750 750" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
