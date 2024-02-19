@@ -13,8 +13,6 @@ repos:
           - id: prettier
             additional_dependencies:
                 - prettier@^3.2.2
-                - "@trivago/prettier-plugin-sort-imports@^4.3.0"
-                - prettier-plugin-tailwindcss@^0.5.11
 
     # pre commit dari eslint
     - repo: https://github.com/pre-commit/mirrors-eslint
@@ -23,12 +21,8 @@ repos:
           - id: eslint
             files: \.[jt]sx?$
             types: [file]
-            additional_dependencies:
-                - eslint@^8.56.0
-                - eslint-config-next@14.0.4
-                - eslint-config-prettier@^9.1.0
-                - eslint-plugin-prettier@^5.1.3
 
+    # pre commit dari markdownlint
     - repo: https://github.com/igorshubovych/markdownlint-cli
       rev: v0.39.0
       hooks:
