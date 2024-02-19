@@ -37,5 +37,16 @@ jobs:
                   GH_TOKEN: ${{ secrets.WF_TOKEN }}
                   PR: ${{ github.event.pull_request.html_url }}
               run: |
-                  gh pr edit $PR --add-label 'invalid'
-                  gh pr comment $PR --body 'The build for this pull request was not successful. Please review the logs for more details AND please review our [contributing guidelines](https://github.com/Bellshade/OpenSeriesWeb/blob/main/CONTRIBUTING.md).'
+                  LAST_COMMIT_SHA="${{ github.event.pull_request.head.sha }}"
+                  gh pr edit $PR --add-label "invalid"
+                  gh pr comment $PR --body "# Building Next.js\nBuild untuk pull request ini tidak berhasil. Sepertinya ada kesalahan dalam kode yang menyebabkan kegagalan build.\nMohon kontributor untuk mengecek kembali kodenya.\n| Last Commit | Status    |\n|-------------|-----------|\n| $LAST_COMMIT_SHA      | Gagal💔    |"
+
+            - name: Comment on Pull Request (on success)
+              if: success()
+              env:
+                  GH_TOKEN: ${{ secrets.WF_TOKEN }}
+                  PR: ${{ github.event.pull_request.html_url }}
+              run: |
+                  LAST_COMMIT_SHA="${{ github.event.pull_request.head.sha }}"
+                  gh pr edit $PR --add-label "invalid"
+                  gh pr comment $PR --body "# Building Next.js\nBuild untuk pull request ini berhasil!🎉. Mohon untuk menunggu para Maintainer mereview kodemu!.\n| Last Commit | Status    |\n|-------------|-----------|\n| $LAST_COMMIT_SHA      | Berhasil🩵    |"
