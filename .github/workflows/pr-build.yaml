@@ -49,11 +49,11 @@ jobs:
                       REMOVAL_LABEL="ready to review"
                   fi
                   COMMENT_BODY=$(cat <<EOF
-                      # Building Next.js
-                      Build untuk pull request ini $BUILD_STATUS. $SUCCESS_MESSAGE
-                      | Commit | Status    |
-                      |-------------|-----------|
-                      | $LAST_COMMIT_SHA      | $BUILD_STATUS    |
+                  ## Building Next.js
+                  Build untuk pull request ini $BUILD_STATUS. $SUCCESS_MESSAGE
+                  | Commit | Status    |
+                  |-------------|-----------|
+                  | $LAST_COMMIT_SHA      | $BUILD_STATUS    |
                   EOF
                   )
                   gh pr edit $PR --add-label "$LABEL"
