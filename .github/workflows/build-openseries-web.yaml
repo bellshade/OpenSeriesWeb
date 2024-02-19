@@ -34,22 +34,27 @@ jobs:
                     exit 1
                   fi
 
+    comment:
+        needs: build
+        runs-on: ubuntu-latest
+        if: always()
+        steps:
             - name: Comment on Pull Request
               env:
                   GH_TOKEN: ${{ secrets.WF_TOKEN }}
                   PR: ${{ github.event.pull_request.html_url }}
               run: |
                   LAST_COMMIT_SHA="${{ github.event.pull_request.head.sha }}"
-                  if [[ ${{ job.status }} == 'success' ]]; then
-                      BUILD_STATUS="Berhasil🩵"
-                      LABEL="ready to review"
-                      SUCCESS_MESSAGE="Mohon untuk menunggu para Maintainer mereview kodemu🎉!"
-                      REMOVAL_LABEL="invalid"
+                  if [ ${{ needs.build.result }} == 'success' ]; then
+                    BUILD_STATUS="Berhasil🩵"
+                    LABEL="ready to review"
+                    SUCCESS_MESSAGE="Mohon untuk menunggu para Maintainer mereview kodemu🎉!"
+                    REMOVAL_LABEL="invalid"
                   else
-                      BUILD_STATUS="Gagal💔"
-                      LABEL="invalid"
-                      SUCCESS_MESSAGE="Sepertinya ada kesalahan dalam kode yang menyebabkan kegagalan build. Coba jalankan `bun run build` di localmu. Silahkan perbaiki terlebih dahulu😼!"
-                      REMOVAL_LABEL="ready to review"
+                    BUILD_STATUS="Gagal💔"
+                    LABEL="invalid"
+                    SUCCESS_MESSAGE="Sepertinya ada kesalahan dalam kode yang menyebabkan kegagalan build. Coba jalankan \`bun run build\` di localmu. Silahkan perbaiki terlebih dahulu😼!"
+                    REMOVAL_LABEL="ready to review"
                   fi
                   COMMENT_BODY=$(cat <<EOF
                   ## Building Website OpenSeries😍
