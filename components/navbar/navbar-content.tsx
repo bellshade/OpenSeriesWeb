@@ -44,7 +44,7 @@ const NavbarContent = ({ version }: Props) => {
                         </span>
                         <Link
                             href="/docs/changelog"
-                            className="hidden items-center gap-1 rounded-full bg-rose-600/20 px-4 py-1.5 text-sm font-medium text-rose-400 hover:bg-rose-600 hover:text-white sm:flex"
+                            className="hidden items-center gap-1 rounded-full bg-rose-600/20 px-4 py-1.5 text-sm font-medium text-rose-600 hover:bg-rose-600 hover:text-white dark:text-rose-400 sm:flex"
                         >
                             Changelog OpenSeries {version}
                             <span className="icon-[tabler--chevron-right]"></span>
