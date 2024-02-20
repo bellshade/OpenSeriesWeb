@@ -25,6 +25,7 @@ const ThemeSwitcher = () => {
                     onClick={() => setTheme("light")}
                 >
                     <span className="icon-[line-md--sun-rising-loop]"></span>
+                    <span className="sr-only">Light Mode</span>
                 </button>
             );
         } else {
@@ -34,6 +35,7 @@ const ThemeSwitcher = () => {
                     onClick={() => setTheme("dark")}
                 >
                     <span className="icon-[line-md--moon-loop]"></span>
+                    <span className="sr-only">Dark Mode</span>
                 </button>
             );
         }

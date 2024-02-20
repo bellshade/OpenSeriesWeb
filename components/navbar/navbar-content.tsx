@@ -39,12 +39,12 @@ const NavbarContent = ({ version }: Props) => {
                         >
                             OpenSeries
                         </Link>
-                        <span className="rounded-full bg-indigo-600/20 px-4 py-1.5 text-sm font-semibold text-indigo-500">
+                        <span className="rounded-full bg-indigo-600/20 px-4 py-1.5 text-sm font-semibold text-indigo-600 dark:text-indigo-300">
                             {version}
                         </span>
                         <Link
                             href="/docs/changelog"
-                            className="hidden items-center gap-1 rounded-full bg-rose-600/20 px-4 py-1.5 text-sm font-medium text-rose-600 hover:bg-rose-600 hover:text-white dark:text-rose-400 sm:flex"
+                            className="hidden items-center gap-1 rounded-full bg-rose-600/20 px-4 py-1.5 text-sm font-semibold text-rose-800 hover:bg-rose-600 hover:text-white dark:text-rose-400 sm:flex"
                         >
                             Changelog OpenSeries {version}
                             <span className="icon-[tabler--chevron-right]"></span>
@@ -57,7 +57,7 @@ const NavbarContent = ({ version }: Props) => {
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
-                                    className="text-lg text-zinc-500 hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-500 lg:text-sm"
+                                    className="text-lg font-semibold text-zinc-500 hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-500 lg:text-sm"
                                     href={link.href}
                                     target={link.target}
                                     onClick={() => setIsOpen(false)}
@@ -75,6 +75,7 @@ const NavbarContent = ({ version }: Props) => {
                                     className={`grid h-10 w-10  place-items-center rounded-lg text-xl text-zinc-500 hover:bg-zinc-200 dark:text-zinc-400 dark:hover:bg-zinc-700`}
                                 >
                                     <span className={link.icon}></span>
+                                    <span className="sr-only">{link.name}</span>
                                 </Link>
                             ))}
                             <ThemeSwitcher />
@@ -85,6 +86,7 @@ const NavbarContent = ({ version }: Props) => {
                                 <span
                                     className={`${isOpen ? "icon-[tabler--x]" : "icon-[tabler--dots-vertical]"}`}
                                 ></span>
+                                <span className="sr-only">Toggle Navbar</span>
                             </button>
                         </div>
                     </div>
@@ -96,6 +98,7 @@ const NavbarContent = ({ version }: Props) => {
                             className="grid h-10 w-10 place-items-center rounded-lg text-xl text-zinc-500 hover:bg-zinc-200 dark:text-zinc-400 dark:hover:bg-zinc-700 lg:hidden"
                         >
                             <span className="icon-[tabler--menu-2]"></span>
+                            <span className="sr-only">Buka Navbar</span>
                         </button>
 
                         <Breadcrumbs />

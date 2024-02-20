@@ -11,7 +11,7 @@ export default function Home() {
         <main className="flex min-h-dvh items-center justify-center py-20">
             <div className="container grid items-center gap-10 text-center lg:grid-cols-2 lg:text-left">
                 <div className="order-2 space-y-8 lg:order-1">
-                    <h1 className="text-5xl font-black sm:text-8xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+                    <h1 className="text-5xl font-black sm:text-7xl md:text-8xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
                         <span className="bg-gradient-to-br from-indigo-600 to-rose-400 bg-clip-text text-transparent">
                             OpenSeries:{" "}
                         </span>
@@ -34,7 +34,7 @@ export default function Home() {
                                 <Link
                                     key={link.name}
                                     target="_blank"
-                                    className="whitespace-nowrap rounded-full border-2 border-rose-400 px-4 py-1 text-xs font-medium text-rose-400 hover:bg-rose-400/20"
+                                    className="whitespace-nowrap rounded-full border-2 border-rose-600 px-4 py-1 text-xs font-semibold text-rose-600 hover:bg-rose-600/10 dark:border-rose-400 dark:text-rose-400"
                                     href={link.href}
                                 >
                                     {link.name}

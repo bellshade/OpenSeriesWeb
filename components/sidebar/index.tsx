@@ -27,6 +27,7 @@ const Sidebar = ({ sidebarLinks }: Props) => {
                     className="absolute right-5 top-10 block text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300 lg:hidden"
                 >
                     <span className="icon-[tabler--x] size-6"></span>
+                    <span className="sr-only">Tutup Sidebar</span>
                 </button>
                 <div className="grid gap-2">
                     {featuredLinks.map((link) => (
@@ -35,7 +36,7 @@ const Sidebar = ({ sidebarLinks }: Props) => {
                             key={link.name}
                             target={link.target}
                             onClick={() => toggleSidebar()}
-                            className="group flex items-center gap-2 font-medium text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300"
+                            className="group flex items-center gap-2 font-medium text-zinc-600 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-300"
                         >
                             <div
                                 className={`grid h-10 w-10 place-items-center rounded-lg ${link.href === pathname ? "bg-indigo-600 text-white" : "bg-indigo-600/10 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white dark:text-indigo-500"}`}
@@ -56,7 +57,7 @@ const Sidebar = ({ sidebarLinks }: Props) => {
                                 {sidebarLinks[category].map((item) => (
                                     <Link
                                         key={item.link}
-                                        className={`border-l-2 py-2 pl-6 text-sm font-medium capitalize hover:border-l-indigo-600 hover:text-indigo-600 dark:hover:border-l-indigo-500 dark:hover:text-indigo-500 ${item.link === pathname ? "border-l-indigo-600 text-indigo-600 dark:border-l-indigo-500 dark:text-indigo-500" : "text-zinc-400 dark:border-l-zinc-700"}`}
+                                        className={`border-l-2 py-2 pl-6 text-sm font-medium capitalize hover:border-l-indigo-600 hover:text-indigo-600 dark:hover:border-l-indigo-500 dark:hover:text-indigo-500 ${item.link === pathname ? "border-l-indigo-600 text-indigo-600 dark:border-l-indigo-500 dark:text-indigo-500" : "text-zinc-500 dark:border-l-zinc-700 dark:text-zinc-400"}`}
                                         href={item.link}
                                         onClick={() => toggleSidebar()}
                                     >
