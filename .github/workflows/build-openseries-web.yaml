@@ -21,9 +21,7 @@ jobs:
 
             - name: Build Next.js
               run: |
-                  bun install --frozen-lockfile
-                  bun lint
-                  bun run build
+                  bunx @cloudflare/next-on-pages@1
 
             - name: Check Build Status
               run: |
