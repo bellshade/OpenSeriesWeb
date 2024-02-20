@@ -23,7 +23,7 @@ const Breadcrumbs = () => {
                             {label}
                         </li>
                         {pathNames.length !== index + 1 && (
-                            <span className="icon-[tabler--chevron-right] h-5 w-4 text-zinc-500 dark:text-zinc-400"></span>
+                            <li className="icon-[tabler--chevron-right] h-5 w-4 text-zinc-500 dark:text-zinc-400"></li>
                         )}
                     </Fragment>
                 );

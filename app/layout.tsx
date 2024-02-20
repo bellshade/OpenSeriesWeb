@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
     return (
         <html lang="en">
-            <body className={`${montserrat.className} bg-white dark:bg-zinc-800`}>
+            <body className={`${montserrat.className} bg-white antialiased dark:bg-zinc-800`}>
                 <ThemeProvider>
                     <Navbar />
                     <NextTopLoader color="#4f46e5" />
