@@ -3,7 +3,7 @@ name: Bug report
 about: Buat laporan untuk membantu kami memperbaiki
 title: "[BUG] "
 labels: bug
-assignees: abnvlf
+assignees: powdotkim
 ---
 
 ## Deskripsikan Bug

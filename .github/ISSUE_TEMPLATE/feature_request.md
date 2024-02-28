@@ -3,7 +3,7 @@ name: Feature request
 about: Ajukan ide untuk proyek ini
 title: "[REQUEST] "
 labels: enhancement
-assignees: abnvlf
+assignees: powdotkim
 ---
 
 ## Apakah permintaan fitur Anda terkait dengan masalah? Silakan deskripsikan
